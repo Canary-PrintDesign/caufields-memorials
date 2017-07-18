@@ -5,12 +5,17 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" media="screen" href="/fonts/metropolis.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     <%= stylesheet_link_tag "site.bundle" %>
-    <%= javascript_include_tag "site.bundle" %>
   </head>
-  <body>
+  <body class="<%= page_classes %>">
+    <%= partial "partials/layouts/page_header" %>
     <%= yield %>
+    <%= partial "partials/layouts/page_footer" %>
+    <%= partial "partials/google_analytics" %>
+    <%= javascript_include_tag "site.bundle" %>
   </body>
 </html>

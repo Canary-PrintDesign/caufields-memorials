@@ -1,0 +1,17 @@
+$dove-gray:     hsl(0, 0%, 40%); // BODY
+$matisse:       hsl(203, 66%, 41%); // BLUE
+$mine-shaft:    hsl(0, 0%, 20%); // HEADINGS
+
+$grey:          hsl(0, 0%, 92%);
+$white:         hsl(0, 0%, 100%);
+
+$brand-primary: $mine-shaft;
+$brand-secondary: $dove-gray;
+$brand-tertiary: $matisse;
+
+$color-body: $dove-gray;
+
+$font-family-heading: 'Playfair Display', serif;
+$font-family-body: 'Metropolis', sans-serif;
+
+$site-width: 1200px;
