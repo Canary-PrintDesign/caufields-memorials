@@ -19,6 +19,8 @@ activate :external_pipeline,
   source: '.tmp/dist',
   latency: 1
 
+activate :relative_assets
+set :relative_links, true
 activate :directory_indexes
 activate :aria_current
 
