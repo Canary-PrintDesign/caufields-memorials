@@ -6,14 +6,19 @@
     padding: 20px 0 20px;
     .nav-container {
     	position: relative;
-    	display: grid;
-    	grid-template-columns: 1fr minmax(max-content, 462px);
+    	@include mq($from: tablet) {
+	    	display: grid;
+	    	grid-template-columns: 1fr minmax(max-content, 462px);
+	    }
     }
     .nav-left {
 		
     }
     .nav-right {
 		text-align: right;
+		@include mq($from: mobile, $until: tablet) {
+			display: none;
+		}
     }
     a {
 		color: $white;
@@ -39,8 +44,10 @@
 		margin-bottom: 22px;
     }
     ul {
-	    display: flex;
-		justify-content: space-between;
+    	@include mq($from: tablet) {
+	    	display: flex;
+			justify-content: space-between;
+		}
 		list-style: none;
 		padding-left: 0;
     }

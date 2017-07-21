@@ -16,11 +16,18 @@ h2{
 h1 {
 	font-size: em(62);
 	font-weight: 900;
+	@include mq($from: mobile, $until: tablet) {
+		font-size: em(42);
+		line-height: 1;
+	}
 	span{
 		font-weight: 400;
 		font-size: 80px;
 		position: relative;
     	bottom: -16px;
+    	@include mq($from: mobile, $until: tablet) {
+			font-size: 66px;
+		}
 	}
 }
 

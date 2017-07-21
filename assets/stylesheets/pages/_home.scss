@@ -34,15 +34,18 @@
 		overflow: hidden;
 
 	}
-	@include mq($until: tablet) {
-		min-height: 450px;
+
+	@include mq($from: mobile, $until: tablet) {
+		div {
+			min-height: 450px;
+		}
 	}
 	@include mq($from: tablet) {
 
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		height: 780px; 
+		height: 780px;  
 
 	    .item-1 {
 	        grid-column: 1;
@@ -76,9 +79,11 @@
 }
 
 .single-testimonial{
-	display: grid;
-	grid-template-columns: 210px 3fr;
-	grid-gap: 62px;
+	@include mq($from: tablet) {
+		display: grid;
+		grid-template-columns: 210px 3fr;
+		grid-gap: 62px;
+	}
 	.img-author{
 		border-radius: 50%;
 		background: #eee;

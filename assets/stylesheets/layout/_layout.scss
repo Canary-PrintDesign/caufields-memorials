@@ -28,6 +28,7 @@ body {
 .inner-container {
   max-width: 860px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 section{
@@ -36,8 +37,10 @@ section{
 }
 
 .col-3{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  @include mq($from: tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /* css grid */

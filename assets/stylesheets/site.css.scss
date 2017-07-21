@@ -1,12 +1,13 @@
 @import "mixins";
 @import "constants";
 
+@import "layout/breakpoints";
+
 @import "components/button";
 @import "components/hero";
 @import "components/testimonials";
 @import "components/typography";
 
-@import "layout/breakpoints";
 @import "layout/layout";
 @import "layout/header";
 @import "layout/footer";
