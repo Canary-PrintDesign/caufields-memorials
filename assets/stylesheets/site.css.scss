@@ -1,3 +1,4 @@
+@import "mixins";
 @import "constants";
 
 @import "components/button";
@@ -5,6 +6,12 @@
 @import "components/testimonials";
 @import "components/typography";
 
+@import "layout/breakpoints";
+@import "layout/layout";
+@import "layout/header";
+@import "layout/footer";
+
 @import "pages/contact";
 @import "pages/estimate";
 @import "pages/home";
+

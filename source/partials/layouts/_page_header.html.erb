@@ -1,0 +1,26 @@
+<header class="nav-header">
+  <div class="container">
+    <div class="nav-container">
+      <div class="nav-left">
+        <div class="contact">
+          <%= link_to '250.542.6293', 'tel:1-250-542-6293', :class => 'phone' %> | 
+          <%= link_to '1.855.590.6293', 'tel:1-855-590-6293', :class => 'phone' %>
+        </div>
+        <% link_to '/', :class => 'logo-link' do %>
+          <%= image_tag 'logo-ce.png', :class => 'site-logo' %>
+        <% end %>
+      </div>
+      <div class="nav-right">
+        <nav>
+          <%= current_link_to 'Free Quote', '/estimate/', :class => 'quote-link btn' %>
+          <ul>
+            <li><%= current_link_to 'About', '/about/' %></li>
+            <li><%= current_link_to 'Services', '/services/' %></li>
+            <li><%= current_link_to 'Process', '/process/' %></li>
+            <li><%= current_link_to 'Contact', '/contact/' %></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
