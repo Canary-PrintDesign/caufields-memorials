@@ -24,7 +24,16 @@
 		nav {
 			li {
 				a {
-					&:hover{
+
+// Temp hover style, to be replaced with animated line
+					&:hover, &:active {
+						color: $brand-tertiary;
+						@include Opacity(.5);
+						border-bottom: 2px solid $brand-tertiary;
+						padding-bottom: 2px;
+					}
+
+					&[aria-current]:not([aria-current="false"]) {
 						color: $brand-tertiary;
 						@include Opacity(1);
 						border-bottom: 2px solid $brand-tertiary;
