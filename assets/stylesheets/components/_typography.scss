@@ -1,31 +1,65 @@
 body {
   color: $color-body;
   font-family: $font-family-body;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
-h2,
-h3,
-h4 {
+.h2,
+h2{
   font-family: $font-family-heading;
+  margin-top: 0;
 }
 
 h1 {
-
+	font-size: em(62);
+	font-weight: 900;
+	@include mq($from: mobile, $until: tablet) {
+		font-size: em(42);
+		line-height: 1;
+	}
+	span{
+		font-weight: 400;
+		font-size: 80px;
+		position: relative;
+    	bottom: -16px;
+    	@include mq($from: mobile, $until: tablet) {
+			font-size: 66px;
+		}
+	}
 }
 
 h2 {
+	color: $brand-primary;
+	font-size: em(34);
+	font-weight: 900;
 
 }
 
-a {
+h3 {
+	color: $brand-secondary;
+	font-size: 18px;
+	font-weight: 700;
+	font-family: $font-family-body;
+	text-transform: uppercase;
+}
 
+a {
+	color: $brand-tertiary;
+	font-weight: 700;
+	font-size: em(16);
+	text-decoration: none;
   &:hover, &:active {
 
   }
 }
 
 p {
-
+	color: #999;
+	font-size: em(18);
+	font-weight: 400;
+	line-height: em(24);
 }
 
