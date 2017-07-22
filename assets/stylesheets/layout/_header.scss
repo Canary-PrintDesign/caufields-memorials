@@ -1,54 +1,67 @@
 .nav-header {
 	position: absolute;
-    top: 0;
-    width: 100%;
-    text-align: left;
-    padding: 20px 0 20px;
-    .nav-container {
-    	position: relative;
-    	@include mq($from: tablet) {
-	    	display: grid;
-	    	grid-template-columns: 1fr minmax(max-content, 462px);
-	    }
-    }
-    .nav-left {
-		
-    }
-    .nav-right {
+	top: 0;
+	width: 100%;
+	text-align: left;
+	padding: 20px 0 20px;
+
+	.nav-container {
+		position: relative;
+
+		@include mq($from: tablet) {
+			display: grid;
+			grid-template-columns: 1fr minmax(max-content, 462px);
+		}
+	}
+
+	.nav-right {
 		text-align: right;
+
 		@include mq($from: mobile, $until: tablet) {
 			display: none;
 		}
-    }
-    a {
+
+		nav {
+			li {
+				a {
+					&:hover{
+						color: $brand-tertiary;
+						@include Opacity(1);
+						border-bottom: 2px solid $brand-tertiary;
+						padding-bottom: 2px;
+					}
+				}
+			}
+		}
+	}
+
+	a {
 		color: $white;
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.025em;
 		display: inline-block;
 		cursor: pointer;
-		&:hover{
-			color: $brand-tertiary;
-			@include Opacity(1);
-			border-bottom: 2px solid $brand-tertiary;
-			padding-bottom: 2px;
-		}
-    }
-    .contact {
-    	@include Opacity(0.49);
-    	font-size: em(18);
-    	color: $white;
-    	padding-bottom: 20px;
-    }
-    .quote-link {
-		margin-bottom: 22px;
-    }
-    ul {
-    	@include mq($from: tablet) {
-	    	display: flex;
-			justify-content: space-between;
-		}
+	}
+
+	.contact {
+		@include Opacity(0.49);
+		font-size: em(18);
+		color: $white;
+		padding-bottom: 20px;
+	}
+
+	.quote-link {
+	margin-bottom: 22px;
+	}
+
+	ul {
 		list-style: none;
 		padding-left: 0;
-    }
+
+		@include mq($from: tablet) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
 }

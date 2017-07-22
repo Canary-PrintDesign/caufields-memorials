@@ -1,31 +1,32 @@
 body {
-  color: $color-body;
-  font-family: $font-family-body;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	color: $color-body;
+	font-family: $font-family-body;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-.h2,
-h2{
-  font-family: $font-family-heading;
-  margin-top: 0;
+h1, .h2, h2 {
+	font-family: $font-family-heading;
+	margin-top: 0;
 }
 
 h1 {
 	font-size: em(62);
 	font-weight: 900;
+
 	@include mq($from: mobile, $until: tablet) {
 		font-size: em(42);
 		line-height: 1;
 	}
-	span{
+
+	span {
 		font-weight: 400;
 		font-size: 80px;
 		position: relative;
-    	bottom: -16px;
-    	@include mq($from: mobile, $until: tablet) {
+		bottom: -16px;
+
+		@include mq($from: mobile, $until: tablet) {
 			font-size: 66px;
 		}
 	}
@@ -35,7 +36,6 @@ h2 {
 	color: $brand-primary;
 	font-size: em(34);
 	font-weight: 900;
-
 }
 
 h3 {
@@ -51,9 +51,6 @@ a {
 	font-weight: 700;
 	font-size: em(16);
 	text-decoration: none;
-  &:hover, &:active {
-
-  }
 }
 
 p {
@@ -62,4 +59,3 @@ p {
 	font-weight: 400;
 	line-height: em(24);
 }
-

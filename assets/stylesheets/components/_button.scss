@@ -6,24 +6,25 @@
 	@include border-radius(100px);
 }
 
-a.btn,
-button.btn {
-   @include button( none );
-   	border: 2px solid $white;
-   	&:hover{
-   		background: $white;
-   		color: $brand-tertiary;
-   	}
+a.btn, button.btn {
+	@include button( none );
+	border: 2px solid $white;
+
+	&:hover{
+		background: $white;
+		color: $brand-tertiary;
+	}
 }
 
 .btn-primary {
 	@include button($matisse);
 	padding: 14px 32px 13px;
 	font-size: em(18);
-	&:hover{
-   		background: $white;
-   		color: $brand-tertiary;
-   	}
+
+	&:hover {
+		background: $white;
+		color: $brand-tertiary;
+	}
 }
 
 .btn-secondary {
@@ -31,17 +32,18 @@ button.btn {
 	color: $matisse;
 }
 
-.link-primary{
+.link-primary {
 	position: relative;
 	text-transform: uppercase;
-	&:after{
-	    content: '';
-	    width: 45%;
-	    background: $brand-tertiary;
-	    height: 2px;
-	    position: absolute;
-	    bottom: -12px;
-	    left: 50%;
-	    transform: translateX(-50%);
+
+	&:after {
+		content: '';
+		width: 45%;
+		background: $brand-tertiary;
+		height: 2px;
+		position: absolute;
+		bottom: -12px;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
