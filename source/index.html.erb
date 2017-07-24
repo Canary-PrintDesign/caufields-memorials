@@ -62,23 +62,23 @@ subtitle: 30 years of quality workmanship, fast delivery, attention to detail, a
 	</section>
 
 	<section class="testimonials">
-		<div class="inner-container">
+		<div class="container">
 			<h2>Testimonial</h2>
 			<div class="single-testimonial">
 				<div class="img-author"></div>
 				<div class="quote">
 					<p>"<%= lorem.sentences 3 %>"</p>
-					<p class="author">--- Joshua Earle</p>
+					<p class="author"> Joshua Earle</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="quote">
+	<section class="estimate-banner">
 		<div class="container">
 			<h2>Use our build tool to get a free estimate for<br />your custom engraving needs</h2>
 			<p>"<%= lorem.sentences 3 %>"</p>
-			<%= current_link_to 'Get A Free Quote', '/estimate/', :class => 'btn-primary'  %>
+			<div class="btn-container"><%= current_link_to 'Get A Free Quote', '/estimate/', :class => 'btn-secondary'  %></div>
 		</div>
 	</section>
 
