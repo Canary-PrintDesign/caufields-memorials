@@ -3,6 +3,7 @@
 	color: $white;
 	padding:8px 32px 7px;
 	display: inline-block;
+	text-transform: uppercase;
 	@include border-radius(100px);
 }
 
@@ -29,20 +30,29 @@ a.btn, button.btn {
 
 .btn-secondary {
 	@include button($white);
-	color: $matisse;
+	color: $brand-tertiary;
+	padding: 14px 32px 13px;
+	font-size: em(18);
+	border: 5px solid $brand-tertiary;
+	&:hover {
+		background: none;
+		color: $white;
+		border-color: $white;
+	}
 }
 
 .link-primary {
 	position: relative;
 	text-transform: uppercase;
-
+	margin-top: 20px;
+	display: inline-block;
 	&:after {
 		content: '';
 		width: 45%;
 		background: $brand-tertiary;
-		height: 2px;
+		height: 3px;
 		position: absolute;
-		bottom: -12px;
+		bottom: -20px;
 		left: 50%;
 		transform: translateX(-50%);
 	}

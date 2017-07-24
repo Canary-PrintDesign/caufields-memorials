@@ -36,6 +36,9 @@ h2 {
 	color: $brand-primary;
 	font-size: em(34);
 	font-weight: 900;
+	@include mq($from: mobile, $until: tablet) {
+		font-size: em(28)
+	}
 }
 
 h3 {
@@ -44,6 +47,7 @@ h3 {
 	font-weight: 700;
 	font-family: $font-family-body;
 	text-transform: uppercase;
+	letter-spacing: 0.2em;
 }
 
 a {

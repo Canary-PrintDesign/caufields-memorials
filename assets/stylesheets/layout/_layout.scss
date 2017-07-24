@@ -33,7 +33,10 @@ body {
 
 section {
 	min-height: 386px;
-	padding: 56px 0 56px;
+	padding: 52px 0 80px;
+	@include mq($from: mobile, $until: tablet) {
+		padding: 32px 0 60px;
+	}
 }
 
 .col-3 {
@@ -41,6 +44,9 @@ section {
 	@include mq($from: tablet) {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
+	}
+	div{
+		margin-bottom: 60px;
 	}
 }
 
