@@ -79,8 +79,12 @@
 
 	div{
 		background: #eee;
-		border: 1px solid #000;
+		border: 1px solid #fff;
 		overflow: hidden;
+	}
+	img{
+		max-width: 100%;
+		display: block;
 	}
 
 	@include mq($from: mobile, $until: tablet) {
@@ -94,8 +98,6 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		height: 780px;
-
 		.item-1 {
 			grid-column: 1;
 			grid-row: 1;
