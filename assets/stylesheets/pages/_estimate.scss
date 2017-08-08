@@ -1,0 +1,244 @@
+.estimate {
+	.hero {
+		position: absolute;
+		z-index: 2;
+		width: 100%;
+		padding: 25px 0 0;
+		h1{
+			margin-bottom: 10px;
+			font-size: 48px;
+		}
+		p {
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+	}
+	.main-content {
+		z-index: 1;
+	}
+	.step-1 {
+		background: radial-gradient(ellipse at center, #8fdef1 0%, #2fa6c1 100%);
+		padding-top: 205px;
+		padding-bottom: 50px;
+	}
+	.step-1 .product-container{
+		margin-bottom: 0;
+		padding-top: 20px;
+		transition: all .4s;
+		h3 {
+			letter-spacing: 0.15em;
+			transition: all .4s;
+		}
+    &.active,
+		&:hover {
+		    background: rgba(255, 255, 255, 0.2);
+		    h3 {
+				letter-spacing: 0.2em;
+			}
+		}
+	}
+	.product-container a{
+		display: block;
+	}
+	.img-container{
+		height: 135px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.step-1 .col-3 {
+		padding-top: 20px;
+		padding-right: 15px;
+		padding-left: 15px;
+		padding-bottom: 20px;
+    margin-top: -60px;
+    border-top: none;
+    border-right: 5px solid $brand-secondary;
+    border-bottom: 5px solid $brand-secondary;
+    border-left: 5px solid $brand-secondary;
+    position: relative;
+    &:after {
+  		left: 0;
+  		top: 0px;
+  		width: 14%;
+  		position: absolute;
+  		content: '';
+  		height: 5px;
+  		background: $brand-secondary;
+    }
+    &:before {
+			right: 0;
+			top: 0px;
+			width: 14%;
+			position: absolute;
+			content: '';
+			height: 5px;
+			background: $brand-secondary;
+    }
+	}
+	.step-2 {
+		.product-container {
+			position: relative;
+			&:after{
+				content:'';
+				position: absolute;
+				right: 120px;
+				top: -180px;
+				height: 245px;
+				width: 6px;
+				z-index: 0;
+				background: $brand-secondary;
+			}
+		}
+		.img-container {
+			position: absolute;
+			right: 60px;
+			top: -85px;
+			z-index: 2;
+		}
+		h3 {
+			padding-bottom: 40px;
+		}
+		.size-choices{
+			font-size: 22px;
+			line-height: 1.5;
+			a {
+				display: block;
+				padding: 40px;
+				background: $brand-tertiary;
+				color: $white;
+				border: 5px solid $white;
+        letter-spacing: 0em;
+        transition: all .25s;
+        &.active,
+        &:hover{
+          border: 5px solid $brand-secondary;
+          letter-spacing: 0.025em;
+        }
+			}
+		}
+	}
+  .step-3 {
+    background: radial-gradient(ellipse at center, #8fdef1 0%, #2fa6c1 100%);
+    padding: 50px 0;
+    h2 {
+      color: $white;
+      margin-bottom: 50px;
+    }
+    .product-container {
+      position: relative;
+      &:after{
+        content:'';
+        position: absolute;
+        left: 120px;
+        top: -220px;
+        height: 188px;
+        width: 6px;
+        z-index: 0;
+        background: $brand-secondary;
+      }
+    }
+    h3 {
+      padding-bottom: 40px;
+      color: $white;
+    }
+    .black a{background: #000;}
+    .gray a{
+      background: #eee;
+      h3{
+         color: $brand-secondary;
+      }
+    }
+    .rose a{
+      background: #FFE4E1; color: $brand-secondary;
+      h3{
+         color: $brand-secondary;
+      }
+    }
+    .blue a{background: #006699;}
+    .mahogany a{background: #ae0315;}
+    .color-choices{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-self: center;
+      justify-self: center;
+      div {
+        
+      }
+      a {
+        display: block;
+        padding: 40px;
+        color: $white;
+        border: 5px solid $white;
+        &.active,
+        &:hover{
+          border: 5px solid $brand-secondary;
+          letter-spacing: 0.025em;
+        }
+      }
+    }
+    .other {
+      padding: 20px;
+      text-align: left;
+      p {
+        color: $white;
+        font-style: italic;
+        margin-bottom: 48px;
+      }
+      label {
+        color: $white;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 6px;
+        font-size: 18px;
+      }
+      input {
+        width: 100%;
+        height: 46px;
+        border: 4px solid $white;
+        outline: none;
+        font-size: 18px;
+        padding: 6px;
+        &:focus{
+          border: 4px solid $brand-secondary;
+        }
+      }
+    }
+  }
+}
+.step-5 {
+    background: radial-gradient(ellipse at center, #8fdef1 0%, #2fa6c1 100%);
+  width: 700px;
+  height: 700px;
+  padding-top: 120px;
+  border-radius: 50%;
+  margin: 0 auto;
+  h2{
+    color: $white;
+  }
+  label {
+    color: $white;
+    font-size:  20px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  textarea{
+    width: 100%;
+    height: 100px;
+  }
+  input {
+    width: 50%;
+    margin-bottom: 15px;
+    height: 35px;
+  }
+  .contact-form {
+    text-align: left;
+    padding: 0 70px 50px;
+  }
+  p {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+  }
+}
