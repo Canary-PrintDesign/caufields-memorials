@@ -45,8 +45,18 @@ section {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-	div{
+	> div{
 		margin-bottom: 60px;
+	}
+	.icon-container {
+		height: 175px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			max-width: 150px;
+			height: auto;
+		}
 	}
 }
 

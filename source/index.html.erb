@@ -7,79 +7,102 @@ subtitle: 30 years of quality workmanship, fast delivery, attention to detail, a
 
 <div class="main-content">
 
-	<section class="intro-section">
-		<div class="intro inner-container">
-			<h2>Custom Engraving Specialists</h2>
-			<p>Caufields has in house and on-site sandblasting services for memorial stones and monuments. We have a large selection of granite stones to choose from and can create original ideas easily and quickly. Our laser engraver can create custom d esigns and do portraits on stone. If you are looking for a competitive price, knowledgeable and fast service for your family, come see the samples in our show room and let us make a beautiful memorial for your loved one.</p>
-		</div>
-		<div class="intro-cta">
-			<%= current_link_to 'LEARN MORE ABOUT US', '/about/', :class => 'link-primary'%>
-		</div>
-	</section>
+  <section class="intro-section">
+    <div class="intro inner-container">
+      <h2>Custom Engraving Specialists</h2>
+      <p>Caufields has in house and on-site sandblasting services for memorial stones and monuments. We have a large selection of granite stones to choose from and can create original ideas easily and quickly. Our laser engraver can create custom d esigns and do portraits on stone. If you are looking for a competitive price, knowledgeable and fast service for your family, come see the samples in our show room and let us make a beautiful memorial for your loved one.</p>
+    </div>
+    <div class="intro-cta">
+        <%= current_link_to 'LEARN MORE ABOUT US', '/about/', :class => 'link-primary'%>
+    </div>
+  </section>
 
-	<section class="products-services">
-		<div class="container">
-			<h2>Products & Services</h2>
-			<div class="col-3">
-				<div>
-					<h3>Monuments</h3>
-					<p><%= lorem.sentences 2 %></p>
-					<%= current_link_to 'Learn More', '/monuments/', :class => 'link-primary'  %>
-				</div>
-				<div>
-					<h3>Plaques</h3>
-					<p><%= lorem.sentences 2 %></p>
-					<%= current_link_to 'Learn More', '/plaques/', :class => 'link-primary'  %>
-				</div>
-				<div>
-					<h3>Plates</h3>
-					<p><%= lorem.sentences 2 %></p>
-					<%= current_link_to 'Learn More', '/plates/', :class => 'link-primary'  %>
-				</div>
-			</div>
-			<div class="service-engraving">
-				<h3>We also do on site engraving!</h3>
-				<p><%= lorem.sentences 2 %></p>
-				<%= current_link_to 'Learn More', '/monuments/', :class => 'link-primary'  %>
-			</div>
-		</div>
-	</section>
+  <section class="products-services">
+    <div class="container">
+      <h2>Products & Services</h2>
+      <div class="col-3">
+        <div>
+          <div class="icon-container">
+            <%= image_tag "images/monuments.png", :alt => 'monument icon' %>
+          </div>
+          <h3>Monuments</h3>
+          <p><%= lorem.sentences 2 %></p>
+          <%= current_link_to 'Learn More', '/monuments/', :class => 'link-primary'  %>
+        </div>
+        <div>
+          <div class="icon-container">
+            <%= image_tag "images/plaque.png", :alt => 'monument icon' %>
+          </div>
+          <h3>Plaques</h3>
+          <p><%= lorem.sentences 2 %></p>
+          <%= current_link_to 'Learn More', '/plaques/', :class => 'link-primary'  %>
+        </div>
+        <div>
+          <div class="icon-container">
+            <%= image_tag "images/plate.png", :alt => 'monument icon' %>
+          </div>
+          <h3>Plates</h3>
+          <p><%= lorem.sentences 2 %></p>
+          <%= current_link_to 'Learn More', '/plates/', :class => 'link-primary'  %>
+        </div>
+      </div>
+      <div class="service-engraving">
+        <h3>We also do on site engraving!</h3>
+        <p><%= lorem.sentences 2 %></p>
+        <%= current_link_to 'Learn More', '/monuments/', :class => 'link-primary'  %>
+      </div>
+    </div>
+  </section>
 
-	<section class="our-work">
-		<div class="inner-container">
-			<h2>Samples of our Work</h2>
-			<p><%= lorem.sentences 2 %></p>
-		</div>
-		<div class="work-grid">
-			<div class="item-1"></div>
-			<div class="item-2"></div>
-			<div class="item-3"></div>
-			<div class="item-4"></div>
-			<div class="item-5"></div>
-			<div class="item-6"></div>
-			<div class="item-7"></div>
-		</div>
-	</section>
+  <section class="our-work">
+    <div class="inner-container">
+        <h2>Samples of our Work</h2>
+        <p><%= lorem.sentences 2 %></p>
+    </div>
+    <div class="work-grid">
+        <div class="item-1">
+          <%= image_tag "images/work_1.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
+        </div>
+        <div class="item-2">
+           <%= image_tag "images/work_2.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
+        </div>
+        <div class="item-3">
+           <%= image_tag "images/work_5.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
+        </div>
+        <div class="item-4">
+           <%= image_tag "images/work_4.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
+        </div>
+        <div class="item-5">
+           <%= image_tag "images/work_3.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
+        </div>
+        <div class="item-6">
+         <%= image_tag "images/work_6.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
+        </div>
+        <div class="item-7">
+           <%= image_tag "images/work_7.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
+        </div>
+    </div>
+  </section>
 
-	<section class="testimonials">
-		<div class="container">
-			<h2>Testimonial</h2>
-			<div class="single-testimonial">
-				<div class="img-author"></div>
-				<div class="quote">
-					<p>"<%= lorem.sentences 3 %>"</p>
-					<p class="author"> Joshua Earle</p>
-				</div>
-			</div>
-		</div>
-	</section>
+  <section class="testimonials">
+    <div class="container">
+        <h2>Testimonial</h2>
+        <div class="single-testimonial">
+            <div class="img-author"></div>
+            <div class="quote">
+                <p>"<%= lorem.sentences 3 %>"</p>
+                <p class="author"> Joshua Earle</p>
+            </div>
+        </div>
+    </div>
+  </section>
 
-	<section class="estimate-banner">
-		<div class="container">
-			<h2>Use our build tool to get a free estimate for<br />your custom engraving needs</h2>
-			<p>"<%= lorem.sentences 3 %>"</p>
-			<div class="btn-container"><%= current_link_to 'Get A Free Quote', '/estimate/', :class => 'btn-secondary'  %></div>
-		</div>
-	</section>
+  <section class="estimate-banner">
+    <div class="container">
+        <h2>Use our build tool to get a free estimate for<br />your custom engraving needs</h2>
+        <p>"<%= lorem.sentences 3 %>"</p>
+        <div class="btn-container"><%= current_link_to 'Get A Free Quote', '/estimate/', :class => 'btn-secondary'  %></div>
+    </div>
+  </section>
 
 </div>

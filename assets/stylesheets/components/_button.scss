@@ -11,10 +11,44 @@ a.btn, button.btn {
 	@include button( none );
 	border: 2px solid $white;
 
-	&:hover{
-		background: $white;
-		color: $brand-tertiary;
-	}
+	// &:hover{
+	// 	background: $white;
+	// 	color: $brand-tertiary;
+	// }
+}
+
+/* Rectangle Out */
+a.btn {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.2s;
+  overflow: hidden;
+}
+a.btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $brand-tertiary;
+  transform: scale(0);
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+a.btn:hover, a.btn:focus, a.btn:active {
+  color: white;
+}
+a.btn:hover:before, a.btn:focus:before, a.btn:active:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 .btn-primary {
