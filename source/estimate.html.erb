@@ -10,8 +10,8 @@ subtitle: Step 1. Pick a Type
   <section class="step-1">
     <div class="container">
       <div class="col-3">
-        <div class="product-container">
-          <% link_to('#slant_marker/') do %>
+        <div class="selection-container">
+          <% link_to('#slant_marker') do %>
             <span class="img-container">
               <%= image_tag "images/slant_marker.png", :alt => 'monument icon' %>
             </span>  
@@ -19,8 +19,8 @@ subtitle: Step 1. Pick a Type
           <% end %>
         </div>
 
-        <div class="product-container">
-          <% link_to('#bevel_marker/') do %>
+        <div class="selection-container">
+          <% link_to('#bevel_marker') do %>
             <span class="img-container">
               <%= image_tag "images/plaque.png", :alt => 'monument icon' %>
             </span>  
@@ -28,7 +28,7 @@ subtitle: Step 1. Pick a Type
           <% end %>
         </div>
 
-        <div class="product-container">
+        <div class="selection-container">
           <% link_to('#flat_top/') do %>
             <span class="img-container">
               <%= image_tag "images/flat_top.png", :alt => 'monument icon' %>
@@ -37,7 +37,7 @@ subtitle: Step 1. Pick a Type
           <% end %>
         </div>
 
-        <div class="product-container">
+        <div class="selection-container">
           <% link_to('#serp_top/') do %>
             <span class="img-container">
               <%= image_tag "images/monuments.png", :alt => 'monument icon' %>
@@ -46,7 +46,7 @@ subtitle: Step 1. Pick a Type
           <% end %>
         </div>
 
-        <div class="product-container">
+        <div class="selection-container">
           <% link_to('#grass_marker/') do %>
             <span class="img-container">
               <%= image_tag "images/grass_marker.png", :alt => 'monument icon' %>
@@ -55,7 +55,7 @@ subtitle: Step 1. Pick a Type
           <% end %>
         </div>
 
-        <div class="product-container">
+        <div class="selection-container">
           <% link_to('#bronze_plaque/') do %>
             <span class="img-container">
               <%= image_tag "images/plate.png", :alt => 'monument icon' %>
@@ -73,73 +73,119 @@ subtitle: Step 1. Pick a Type
       
       <h2>Step 2. Pick a Size</h2>
       
-      <div class="product-container">
+      <div class="product-container" id="slant_marker">
         <h3>Slant Marker</h3>
         <span class="img-container">
-          <%= image_tag "images/slant_marker.png", :alt => 'monument icon' %>
+          <%= image_tag "images/slant_marker.png", :alt => 'slant marker' %>
         </span>  
         <div class="col-3 size-choices">
-          <div>
-            <% link_to('#bevel_marker/') do %>
+          <div class="selection-container">
               20x 10 x 16 <br />(Base 22 x 12 x 6)
-            <% end %>
           </div>
-          <div>
-            <% link_to('#bevel_marker/') do %>
+          <div class="selection-container">
               24x 10 x 16 <br />(Base 30 x 12 x 6)
-            <% end %>
           </div>
-          <div>
-            <% link_to('#bevel_marker/') do %>
+          <div class="selection-container">
               30x 10 x 16 <br />(Base 36 x 12 x 4)
-            <% end %>
           </div>
         </div>
       </div>
-
-      <div class="product-container" style="display:none;">
-        <% link_to('#bevel_marker/') do %>
-          <span class="img-container">
-            <%= image_tag "images/plaque.png", :alt => 'monument icon' %>
-          </span>  
-          <h3>Bevel Marker</h3>
-        <% end %>
+      <div class="product-container" id="bevel_marker">
+        <h3>Bevel Marker</h3>
+        <span class="img-container">
+          <%= image_tag "images/bevel_marker.png", :alt => 'bevel marker' %>
+        </span>  
+        <div class="col-3 size-choices">
+          <div class="selection-container">
+              20 x 10 x 6
+          </div>
+          <div class="selection-container">
+              20 x 12 x 6
+          </div>
+          <div class="selection-container">
+              24 x 12 x 6
+          </div>
+          <div class="selection-container">
+              30 x 12 x 6
+          </div>
+        </div>
       </div>
-
-      <div class="product-container" style="display:none;">
-        <% link_to('#flat_top/') do %>
-          <span class="img-container">
-            <%= image_tag "images/flat_top.png", :alt => 'monument icon' %>
-          </span>  
-          <h3>Die (Flat Top)</h3>
-        <% end %>
+      <div class="product-container" id="flat_top">
+        <h3>Die (Flat Top)</h3>
+        <span class="img-container">
+          <%= image_tag "images/flat_top.png", :alt => 'flat top' %>
+        </span>  
+        <div class="col-3 size-choices">
+          <div class="selection-container">
+              20 x 6 x 16 <br />(Base 26 x 12 x 6)
+          </div>
+          <div class="selection-container">
+              24 x 6 x 20 <br />(Base 30 x 12 x 4) 
+          </div>
+          <div class="selection-container">
+              30 x 6 x 20 <br />(Base 36 x 12 x 6)
+          </div>
+        </div>
       </div>
-
-      <div class="product-container" style="display:none;">
-        <% link_to('#serp_top/') do %>
-          <span class="img-container">
-            <%= image_tag "images/monuments.png", :alt => 'monument icon' %>
-          </span>  
-          <h3>Die (Serp Top)</h3>
-        <% end %>
+      <div class="product-container" id="serp_top">
+        <h3>Die (Serp Top)</h3>
+        <span class="img-container">
+          <%= image_tag "images/serp_top.png", :alt => 'serp top' %>
+        </span>  
+        <div class="col-3 size-choices">
+          <div class="selection-container">
+              20 x 6 x 16 <br />(Base 26 x 12 x 6)
+          </div>
+          <div class="selection-container">
+              24 x 6 x 20 <br />(Base 30 x 12 x 4) 
+          </div>
+          <div class="selection-container">
+              30 x 6 x 20 <br />(Base 36 x 12 x 6)
+          </div>
+        </div>  
       </div>
-
-      <div class="product-container" style="display:none;">
-        <% link_to('#grass_marker/') do %>
-          <span class="img-container">
-            <%= image_tag "images/grass_marker.png", :alt => 'monument icon' %>
-          </span>
-          <h3>Flat/Grass Marker</h3>
-        <% end %>
+      <div class="product-container" id="grass_marker">
+        <h3>Grass Marker (Flat)</h3>
+        <span class="img-container">
+          <%= image_tag "images/grass_marker.png", :alt => 'Grass Marker' %>
+        </span>  
+        <div class="col-3 size-choices">
+          <div class="selection-container">
+              12 x 8 x 4
+          </div>
+          <div class="selection-container">
+              20 x 8 x 4
+          </div>
+          <div class="selection-container">
+              20 x 12 x 4
+          </div>
+          <div class="selection-container">
+              24 x 12 x 4
+          </div>
+        </div>
       </div>
-
-      <div class="product-container" style="display:none;">
-        <% link_to('#bronze_plaque/') do %>
-          <span class="img-container">
-            <%= image_tag "images/plate.png", :alt => 'monument icon' %>
-          </span>
-          <h3>Bronzed Plaque</h3>
-        <% end %>
+      <div class="product-container" id="bronze_plaque">
+        <h3>Bronze Plaque</h3>
+        <span class="img-container">
+          <%= image_tag "images/bronze_plaque.png", :alt => 'bronze plaque' %>
+        </span>  
+        <div class="col-3 size-choices">
+          <div class="selection-container">
+              8 x 20
+          </div>
+          <div class="selection-container">
+              12 x 20
+          </div>
+          <div class="selection-container">
+              16 x 10
+          </div>
+          <div class="selection-container">
+             Scrolls
+          </div>
+          <div class="selection-container">
+              Date Tabs
+          </div>
+        </div>
       </div>
     </div>
   </section>
