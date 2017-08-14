@@ -83,6 +83,10 @@ var config = {
       },
     }),
     new ExtractTextPlugin('assets/stylesheets/[name].bundle.css'),
+    new webpack.ProvidePlugin({
+          $: "jquery",
+          jQuery: "jquery"
+      }),
   ],
 };
 
