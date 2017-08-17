@@ -7,3 +7,6 @@ build/
 
 # Ignore webpack temporary build location
 .tmp
+
+# Ignore super-secret password file
+.s3_sync
