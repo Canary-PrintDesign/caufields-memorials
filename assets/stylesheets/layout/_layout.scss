@@ -47,6 +47,10 @@ section {
 	@include mq($from: tablet) {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
+		> div{
+			display: inline-block;
+			padding:0 20px 0 20px;
+		}
 	}
 	> div{
 		margin-bottom: 60px;

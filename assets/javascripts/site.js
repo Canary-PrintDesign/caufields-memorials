@@ -3,9 +3,11 @@ require('jquery');
 console.log('Welcome to Caufield Memorials!');
 
 $(document).ready(function(){
+	if ($(window).width() > 900) {
+   	var height = $( window ).height() - 151;
+		$(".estimate section").css("height",height);
+	}
 
-	var height = $( window ).height() - 151;
-	$(".estimate section").css("height",height);
 	
 	$(".step-2 .product-container").not(".default").hide();
 	
@@ -50,9 +52,13 @@ $(document).ready(function(){
       scrollTop: $(fuller).offset().top - headerHeight
     }, 500);
 
-
-
   });
+
+  	var product
+  	var size 
+  	var color
+  	var addOn
+
 
 });
 
