@@ -23,6 +23,7 @@ activate :relative_assets
 set :relative_links, true
 activate :directory_indexes
 activate :aria_current
+activate :asset_hash
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
