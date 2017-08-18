@@ -1,7 +1,7 @@
 .home-hero {
 	background: url(/images/home_hero_bg.jpg) no-repeat center center;
 	background-size: cover;
-	padding: 270px 0 225px;
+	padding: 275px 0 225px;
 	@include mq($from: mobile, $until: tablet) {
 		padding: 200px 0 175px;
 	}
@@ -81,6 +81,17 @@
 		background: #eee;
 		border: 1px solid #fff;
 		overflow: hidden;
+		display: inline-block;
+		width: 33%;
+		@supports (display: grid) {			
+			width: auto;
+		}
+		&:nth-child(3n){
+			display: none;
+			@supports (display: grid) {
+				display: inline-block;
+			}
+		}
 	}
 	img{
 		max-width: 100%;

@@ -5,7 +5,7 @@ console.log('Welcome to Caufield Memorials!');
 $(document).ready(function(){
 	if ($(window).width() > 900) {
    	var height = $( window ).height() - 151;
-		$(".estimate section").css("height",height);
+		$(".estimate section").css("min-height",height);
 	}
 
 	

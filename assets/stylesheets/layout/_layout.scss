@@ -50,10 +50,14 @@ section {
 		> div{
 			display: inline-block;
 			padding:0 20px 0 20px;
+			width: 33%;
 		}
-	}
+	}	
 	> div{
 		margin-bottom: 60px;
+		@supports (display: grid) {
+			width: auto;
+		}
 	}
 	.icon-container {
 		height: 175px;

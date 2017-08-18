@@ -17,7 +17,13 @@
 
 	.nav-right {
 		text-align: right;
-
+		display: inline-block;
+    	float: right;
+    	width: 45%;
+    	@supports (display: grid) {
+    		float: none;
+    		width: auto;
+    	}
 		@include mq($from: mobile, $until: tablet) {
 			display: none;
 		}
@@ -43,6 +49,9 @@
 				}
 			}
 		}
+	}
+	.nav-left {
+		display: inline-block;
 	}
 
 	a {
