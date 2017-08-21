@@ -2,15 +2,27 @@ require('jquery');
 
 console.log('Welcome to Caufield Memorials!');
 
+var headerHeight = $(".nav-header").height() + 40;
+var height = $( window ).height() - headerHeight;
+
+$(window).scroll(function() {    
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= height) {
+      $(".index .nav-header").removeClass("partial-fixed");
+  } else {
+  	$(".index .nav-header").addClass("partial-fixed");
+  }
+}); 
+
 $(document).ready(function(){
 	if ($(window).width() > 900) {
-   	var height = $( window ).height() - 151;
 		$(".estimate section").css("min-height",height);
+	}else {
+		$("body").css("padding-top",headerHeight);
 	}
-
 	
-	$(".step-2 .product-container").not(".default").hide();
-	
+	$(".step-2 .product-container").not(".default").hide();	
   $(".selection-container").click(function(){
 
     $(this).toggleClass('active');

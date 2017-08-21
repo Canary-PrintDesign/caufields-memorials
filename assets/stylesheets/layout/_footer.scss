@@ -24,7 +24,7 @@ footer {
 		padding-right: 20px;
 	}
 	.footer-content {
-		@include mq($from: tablet) {
+		@include mq($from: 990px) {
 			display: grid;
 			grid-template-columns: 1fr minmax(min-content, 480px);
 		}

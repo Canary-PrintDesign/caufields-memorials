@@ -1,4 +1,6 @@
-<header class="nav-header">
+
+  <header class="nav-header <%= current_page.data.fixedheader %>">
+
 	<div class="container">
 		<div class="nav-container">
 			<div class="nav-left">
@@ -11,8 +13,14 @@
 				<% end %>
 			</div>
 			<div class="nav-right">
-				<nav>
+				<nav role="navigation">
 					<%= current_link_to 'Free Quote', '/estimate/', :class => 'quote-link btn' %>
+					<input type="checkbox" />
+					<a href="#" title="mobile-menu" class="hamburger">
+						<span></span>
+	  				<span></span>
+	  				<span></span>
+	  			</a>
 					<ul>
 						<li><%= current_link_to 'About', '/about/' %></li>
 						<li><%= current_link_to 'Services', '/services/' %></li>

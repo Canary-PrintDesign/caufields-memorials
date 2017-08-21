@@ -1,31 +1,143 @@
+
+
 .nav-header {
 	position: fixed;
 	top: 0;
 	width: 100%;
 	text-align: left;
 	padding: 20px 0 20px;
-  	background: rgba(255,255,255,0.95);
-  	z-index: 3;
+	background: rgba(255,255,255,0.95);
+	z-index: 3;
+	box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.17);
+	transition: all .25s;
 	.nav-container {
 		position: relative;
 
-		@include mq($from: tablet) {
+		@include mq($from: 900px) {
 			display: grid;
 			grid-template-columns: 1fr minmax(max-content, 462px);
+		}
+	}
+	.logo-link {
+		img{
+			max-width: 100%;
+		}
+		@include mq($from: mobile, $until: 900px) {
+			max-width: 55%;
 		}
 	}
 
 	.nav-right {
 		text-align: right;
 		display: inline-block;
-    	float: right;
-    	width: 45%;
-    	@supports (display: grid) {
-    		float: none;
-    		width: auto;
-    	}
-		@include mq($from: mobile, $until: tablet) {
-			display: none;
+  	float: right;
+  	width: 45%;
+  	@supports (display: grid) {
+  		float: none;
+  		width: auto;
+  		
+  	}
+  	@include mq($from: mobile, $until: 900px) {
+  		position: absolute;
+  		right: 0;
+  		top: 0;
+  	}
+  	input {
+  		display: none;
+  	}
+  	.hamburger {
+  		display: none;
+  		position: absolute;	
+  		right: 5px;
+  		top: -5px;
+  		z-index: 6;
+			span {
+			  display: block;
+			  width: 33px;
+			  height: 4px;
+			  margin-bottom: 5px;
+			  position: relative;
+			  background: $brand-tertiary;
+			  border-radius: 3px;
+			  z-index: 1;
+			  transform-origin: 4px 0px;
+			  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+			              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+			              opacity 0.55s ease;
+			}
+  	}
+
+		@include mq($from: mobile, $until: 900px) {
+			.hamburger{
+				display: block;
+			}
+			nav {
+				display: block;
+			  position: relative;
+			  top: 0px;
+			  right: 0px;
+			  z-index: 1;
+			  -webkit-user-select: none;
+			  user-select: none;
+			  span:nth-child(3) {
+				  transform-origin: 0% 0%;
+				}
+				span:nth-child(2) {
+				  transform-origin: 0% 100%;
+				}
+				input:checked ~ a span {
+				  opacity: 1;
+				  transform: rotate(45deg) translate(-2px, -2px);
+				  background: $brand-secondary;
+				}
+			  input:checked ~ a span:nth-child(2) {
+				  opacity: 0;
+				  transform: rotate(0deg) scale(0.2, 0.2);
+				}
+				input:checked ~ a span:nth-child(3) {
+				  opacity: 1;
+				  transform: rotate(-45deg) translate(0, -1px);
+				}
+			  input{
+				  width: 40px;
+				  height: 32px;
+				  position: absolute;
+			    top: -15px;
+			    right: 2px;
+				  cursor: pointer;				  
+				  opacity: 0;
+				  z-index: 7; 
+				  -webkit-touch-callout: none;
+				  display: block;
+				}
+			}
+			nav ul{
+			  position: absolute;
+		    width: 258px;
+		    margin: -125px 0 0 -93px;
+		    padding: 25px;
+		    padding-top: 68px;
+			  background: $brand-tertiary;
+			  list-style-type: none;
+			  -webkit-font-smoothing: antialiased;
+			  transform-origin: 0% 0%;
+			  transform: translate(100%, 0); 
+			  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+			  a {
+		    	color: $white;
+		    	font-size: 22px;
+		    	padding-bottom: 20px;
+		    }
+		    li {
+				  padding: 10px 0;
+				  font-size: 22px;
+				}
+			}
+
+			nav input:checked ~ ul {
+			  transform: scale(1.0, 1.0);
+			  opacity: 1;
+			}
 		}
 
 		nav {
@@ -52,6 +164,9 @@
 	}
 	.nav-left {
 		display: inline-block;
+		@include mq($from: mobile, $until: 900px) {
+			display: block;
+		}
 	}
 
 	a {
@@ -74,26 +189,31 @@
 		margin-bottom: 22px;
     border-color: $brand-tertiary;
     color: $brand-tertiary;
+		@include mq($from: mobile, $until: 900px) {
+    	margin-top: 45px;
+    	padding: 6px 16px;
+    }
 	}
 
 	ul {
 		list-style: none;
 		padding-left: 0;
 
-		@include mq($from: tablet) {
+		@include mq($from: 900px) {
 			display: flex;
 			justify-content: space-between;
 		}
 	}
 }
 
-.index {
-  .nav-header {
+
+.nav-header.partial-fixed  {
+  	position: absolute;
     background: none;
+    box-shadow: none;
     a {
       color: $white;
     }
-  }
 
   .contact {
     color: $white;

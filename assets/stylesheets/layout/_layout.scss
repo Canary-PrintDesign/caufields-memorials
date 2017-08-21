@@ -18,7 +18,7 @@ body {
 		"footer";
 }
 body.index {
-	padding-top: 0;
+	padding-top: 0!important;
 }
 
 .container {
@@ -26,6 +26,9 @@ body.index {
 	max-width: $site-width;
 	margin: 0 auto;
 	padding: 0 20px;
+	@include mq($from: mobile, $until: tablet) {
+		padding: 0 10px;
+	}
 }
 
 .inner-container {
@@ -49,7 +52,6 @@ section {
 		grid-template-columns: 1fr 1fr 1fr;
 		> div{
 			display: inline-block;
-			padding:0 20px 0 20px;
 			width: 33%;
 		}
 	}	
