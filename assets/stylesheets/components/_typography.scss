@@ -56,7 +56,7 @@ h1, .h2, h2 {
 h1 {
 	font-size: em(62);
 	font-weight: 900;
-
+	color: $brand-primary;
 	@include mq($from: mobile, $until: tablet) {
 		font-size: em(42);
 		line-height: 1;

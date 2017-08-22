@@ -1,6 +1,12 @@
 <div class="hero">
 	<div class="container">
-		<h1><%= current_page.data.headline %></h1>
-		<p><%= current_page.data.subtitle %></p>
+		<div class="content-container">
+			<h1><%= current_page.data.headline %></h1>
+			<p class="subtitle"><%= current_page.data.subtitle %></p>
+			<p class="intro-text"><%= current_page.data.introtext %></p>
+		</div>
+		<div class="img-container">
+   			<%= image_tag current_page.data.heroimage, :alt => 'Caufield Engraving Store' %>
+  		</div>
 	</div>
 </div>
