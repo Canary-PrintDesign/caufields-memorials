@@ -1,4 +1,7 @@
 .contact {
+	.sub-template-content{
+		background: none;
+	}
 	.hero  {
 		padding-bottom: 50px;
 	}
@@ -80,14 +83,6 @@
     @include mq($from: mobile, $until: tablet) {
       padding: 20px;
     }
-  }
-  p {
-    color: #fff;
-    text-align: center;
-    font-size: 18px;
-    font-style: italic;
-    max-width: 580px;
-    margin: 0 auto 30px;
   }
   button.btn-primary {
     border: none;

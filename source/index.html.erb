@@ -3,7 +3,7 @@ hero_layout: "partials/layouts/home_hero"
 title: Caufields Memorials
 fixedheader: partial-fixed 
 headline: Headstones <span>&</span> Monuments
-subtitle: 30 years of quality workmanship, fast delivery, attention to detail, and fabulous customer service.
+subtitle: Over 30 years of quality workmanship, fast delivery, attention to detail, and fabulous customer service.
 ---
 
 <div class="main-content">
@@ -97,13 +97,5 @@ subtitle: 30 years of quality workmanship, fast delivery, attention to detail, a
         </div>
     </div>
   </section>
-
-  <section class="estimate-banner">
-    <div class="container">
-        <h2>Use our build tool to get a free estimate for<br />your custom engraving needs</h2>
-        <p>"<%= lorem.sentences 3 %>"</p>
-        <div class="btn-container"><%= current_link_to 'Get A Free Quote', '/estimate/', :class => 'btn-secondary'  %></div>
-    </div>
-  </section>
-
+  <%= partial "partials/layouts/quote_banner" %>
 </div>

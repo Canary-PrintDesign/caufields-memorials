@@ -56,7 +56,7 @@ a.btn:hover:before, a.btn:focus:before, a.btn:active:before {
 	@include button($matisse);
 	padding: 14px 32px 13px;
 	font-size: em(18);
-
+	font-family: $font-family-body;
 	&:hover {
 		background: $white;
 		color: $brand-tertiary;
@@ -81,6 +81,7 @@ a.btn:hover:before, a.btn:focus:before, a.btn:active:before {
 	text-transform: uppercase;
 	margin-top: 20px;
 	display: inline-block;
+	transition: .25s all;
 	&:after {
 		content: '';
 		width: 45%;
@@ -90,5 +91,11 @@ a.btn:hover:before, a.btn:focus:before, a.btn:active:before {
 		bottom: -20px;
 		left: 50%;
 		transform: translateX(-50%);
+		&:hover {
+			width: 100%;
+		}
+	}
+	&:hover {
+		letter-spacing: 0.05em;
 	}
 }

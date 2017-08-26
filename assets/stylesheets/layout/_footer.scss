@@ -9,11 +9,19 @@ footer {
 		letter-spacing: 0.02em;
 		font-weight: 900;
 		color: $brand-primary;
-		margin-bottom: 40px;
+		margin-bottom: 0px;
 		display: block;
 		@include mq($from: mobile, $until: tablet) {
 			font-size: em(26);
 		}
+	}
+	.tagline {
+		font-size: 18px;
+    font-weight: 600;
+    color: #2fa5c0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 8px 0 28px;
 	}
 	li {
 		list-style: none;
