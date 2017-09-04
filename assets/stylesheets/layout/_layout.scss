@@ -16,6 +16,9 @@ body {
 		"header"
 		"content"
 		"footer";
+	@include mq($from: mobile, $until: tablet) {
+		overflow-x: hidden;
+	}
 }
 body.index {
 	padding-top: 0!important;
