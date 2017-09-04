@@ -67,17 +67,8 @@
 	}
 	h2 {
 		position: relative;
+		margin-bottom: 60px;
 		display: inline-block;
-		&:after{
-			content: '';
-			width: 25%;
-			background: $brand-tertiary;
-			height: 3px;
-			position: absolute;
-			bottom: -20px;
-			left: 50%;
-			transform: translateX(-50%);
-		}
 	}
 }
 
