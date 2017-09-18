@@ -5,6 +5,8 @@ headline: Build Your Free Estimate
 subtitle: Step 1. Pick a Type
 ---
 
+<form id="ajax-contact" method="post" action="#" class="estimate-form">
+
 <div class="main-content">
 
   <section class="step-1">
@@ -15,7 +17,8 @@ subtitle: Step 1. Pick a Type
             <span class="img-container">
               <%= image_tag "images/slant_marker.png", :alt => 'monument icon' %>
             </span>  
-            <h3>Slant Marker</h3>
+            <label class="h3" for="slantmarker">Slant Marker</label>
+            <input type="radio" name="type" value="slantmarker" />
           <% end %>
         </div>
 
@@ -24,7 +27,8 @@ subtitle: Step 1. Pick a Type
             <span class="img-container">
               <%= image_tag "images/plaque.png", :alt => 'monument icon' %>
             </span>  
-            <h3>Bevel Marker</h3>
+            <label class="h3" for="bevelmarker">Bevel Marker</label>
+            <input type="radio" name="type" value="bevelmarker" />
           <% end %>
         </div>
 
@@ -33,7 +37,8 @@ subtitle: Step 1. Pick a Type
             <span class="img-container">
               <%= image_tag "images/flat_top.png", :alt => 'monument icon' %>
             </span>  
-            <h3>Die (Flat Top)</h3>
+            <label class="h3" for="flattop">Die (Flat Top)</label>
+            <input type="radio" name="type" value="flattop" />
           <% end %>
         </div>
 
@@ -42,7 +47,8 @@ subtitle: Step 1. Pick a Type
             <span class="img-container">
               <%= image_tag "images/monuments.png", :alt => 'monument icon' %>
             </span>  
-            <h3>Die (Serp Top)</h3>
+            <label class="h3" for="serptop">Die (Serp Top)</label>
+            <input type="radio" name="type" value="serptop" />
           <% end %>
         </div>
 
@@ -51,7 +57,8 @@ subtitle: Step 1. Pick a Type
             <span class="img-container">
               <%= image_tag "images/grass_marker.png", :alt => 'monument icon' %>
             </span>
-            <h3>Flat/Grass Marker</h3>
+            <label class="h3" for="grassmarker">Flat/Grass Marker</label>
+            <input type="radio" name="type" value="grassmarker" />
           <% end %>
         </div>
 
@@ -60,7 +67,8 @@ subtitle: Step 1. Pick a Type
             <span class="img-container">
               <%= image_tag "images/plate.png", :alt => 'monument icon' %>
             </span>
-            <h3>Bronzed Plaque</h3>
+            <label class="h3" for="bronzeplaque">Bronzed Plaque</label>
+            <input type="radio" name="type" value="bronzeplaque" />
           <% end %>
         </div>
 
@@ -81,17 +89,21 @@ subtitle: Step 1. Pick a Type
         <div class="col-3 size-choices">
           <div class="selection-container">
             <div class="copy-container">
-              20 x 10 x 16 Inches<br />(Base 22 x 12 x 6)
+              <label class="h3" for="20x10x16">20 x 10 x 16 Inches<br />(Base 22 x 12 x 6)</label>
+              <input type="radio" name="size" value="20x10x16" />
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              24 x 10 x 16 Inches <br />(Base 30 x 12 x 6)
+              <label class="h3" for="24x10x16">24 x 10 x 16 Inches <br />(Base 30 x 12 x 6)</label>
+              <input type="radio" name="size" value="24x10x16" />
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              30 x 10 x 16 Inches <br />(Base 36 x 12 x 4)
+              
+              <label class="h3" for="30x10x16">30 x 10 x 16 Inches <br />(Base 36 x 12 x 4)</label>
+              <input type="radio" name="size" value="30x10x16" />
             </div>  
           </div>
         </div>
@@ -104,22 +116,29 @@ subtitle: Step 1. Pick a Type
         <div class="col-3 size-choices">
           <div class="selection-container">
             <div class="copy-container">
-              20 x 10 x 6 Inches
+              
+              <label class="h3" for="20x10x6">20 x 10 x 6 Inches</label>
+              <input type="radio" name="size" value="20x10x6" />
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              20 x 12 x 6 Inches
+              
+              <label class="h3" for="20x12x6">20 x 12 x 6 Inches</label>
+              <input type="radio" name="size" value="20x12x6" />
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              24 x 12 x 6 Inches
+              
+              <label class="h3" for="24x12x6">24 x 12 x 6 Inches</label>
+              <input type="radio" name="size" value="24x12x6" />
             </div>  
           </div>
           <div class="selection-container">
-            <div class="copy-container">
-              30 x 12 x 6 Inches
+            <div class="copy-container">              
+              <label class="h3" for="30x12x6">30 x 12 x 6 Inches</label>
+              <input type="radio" name="size" value="30x12x6" />
             </div>  
           </div>
         </div>
@@ -132,17 +151,23 @@ subtitle: Step 1. Pick a Type
         <div class="col-3 size-choices">
           <div class="selection-container">
             <div class="copy-container">
-              20 x 6 x 16 Inches <br />(Base 26 x 12 x 6)
+              
+              <label class="h3" for="20x6x16">20 x 6 x 16 Inches <br />(Base 26 x 12 x 6)</label>
+              <input type="radio" name="size" value="20x6x16" />
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              24 x 6 x 20 Inches <br />(Base 30 x 12 x 4) 
+              
+              <label class="h3" for="24x6x20">24 x 6 x 20 Inches <br />(Base 30 x 12 x 4) </label>
+              <input type="radio" name="size" value="24x6x20" />              
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              30 x 6 x 20 Inches <br />(Base 36 x 12 x 6)
+             
+              <label class="h3" for="30x6x20"> 30 x 6 x 20 Inches <br />(Base 36 x 12 x 6)</label>
+              <input type="radio" name="size" value="30x6x20" />
             </div>  
           </div>
         </div>
@@ -155,17 +180,23 @@ subtitle: Step 1. Pick a Type
         <div class="col-3 size-choices">
           <div class="selection-container">
             <div class="copy-container">
-              20 x 6 x 16 Inches <br />(Base 26 x 12 x 6)
+              
+              <label class="h3" for="20x6x16">20 x 6 x 16 Inches <br />(Base 26 x 12 x 6)</label>
+              <input type="radio" name="size" value="20x6x16" />
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              24 x 6 x 20 Inches <br />(Base 30 x 12 x 4) 
+              
+              <label class="h3" for="24x6x20">24 x 6 x 20 Inches <br />(Base 30 x 12 x 4) </label>
+              <input type="radio" name="size" value="24x6x20" />
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              30 x 6 x 20 Inches <br />(Base 36 x 12 x 6)
+              
+              <label class="h3" for="30x6x20">30 x 6 x 20 Inches <br />(Base 36 x 12 x 6) </label>
+              <input type="radio" name="size" value="30x6x20" />
             </div>  
           </div>
         </div>  
@@ -178,22 +209,30 @@ subtitle: Step 1. Pick a Type
         <div class="col-3 size-choices">
           <div class="selection-container">
             <div class="copy-container">
-              12 x 8 x 4 Inches
+             
+              <label class="h3" for="12x8x4"> 12 x 8 x 4 Inches</label>
+              <input type="radio" name="size" value="12x8x4" />
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              20 x 8 x 4 Inches
+              
+              <label class="h3" for="20x8x4"> 20 x 8 x 4 Inches</label>
+              <input type="radio" name="size" value="20x8x4" />
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              20 x 12 x 4 Inches
+              
+               <label class="h3" for="20x12x4">20 x 12 x 4 Inches</label>
+              <input type="radio" name="size" value="20x12x4" />
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              24 x 12 x 4 Inches
+              
+              <label class="h3" for="24x12x4">24 x 12 x 4 Inches</label>
+              <input type="radio" name="size" value="24x12x4" />
             </div>  
           </div>
         </div>
@@ -206,17 +245,22 @@ subtitle: Step 1. Pick a Type
         <div class="col-3 size-choices">
           <div class="selection-container">
             <div class="copy-container">
-              8 x 20 Inches
+              
+              <label class="h3" for="8x20">8 x 20 Inches</label>
+              <input type="radio" name="size" value="8x20" />
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              12 x 20 Inches
+              
+              <label class="h3" for="12x20">12 x 20 Inches</label>
+              <input type="radio" name="size" value="12x20" />
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              16 x 10 Inches
+              <label class="h3" for="12x20">16 x 10 Inches</label>
+              <input type="radio" name="size" value="16x10" />
             </div>  
           </div>
         </div>
@@ -322,10 +366,11 @@ subtitle: Step 1. Pick a Type
           <label>Additional Comments</label>
           <textarea></textarea>
         </div>
-        <button class="btn-primary">Send in for Your Quote</button>
+        <button type="submit" class="btn-primary">Send in for Your Quote</button>
       </div>
     </div>  
     
   </section>
 
 </div>
+</form>
