@@ -142,29 +142,23 @@
 		}
 	}
 }
-
+.testimonials {
+	padding-top: 80px;
+}
 .single-testimonial {
-	max-width: 1022px;
+	max-width: 822px;
 	margin: 0 auto;
+	text-align: center;
 
 	@include mq($from: tablet) {
-		display: grid;
-		grid-template-columns: 210px 3fr;
-		grid-gap: 62px;
+
 	}
 	@include mq($from: mobile, $until: tablet) {
 		text-align: center;
 	}
-	.img-author {
-		border-radius: 50%;
-		background: #eee;
-		height: 210px;
-		width: 210px;
-		display: inline-block;
-	}
 
 	.quote {
-		text-align: left;
+		text-align: center;
 		p {
 			font-size: em(22);
 			font-style: italic;
@@ -176,6 +170,8 @@
 				font-style: normal;
 				padding-left: 56px;
 				position: relative;
+				display: inline-block;
+				margin-top: 0;
 				&:before {
 					content: '';
 					height: 3px;

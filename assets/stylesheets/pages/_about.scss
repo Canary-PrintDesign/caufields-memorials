@@ -3,6 +3,7 @@
 }
 .team {
 	padding-bottom: 0;
+	min-height: 0;
 	h2 {
 		padding-bottom: 40px;
 	}
@@ -11,6 +12,12 @@
 		div {
 			flex: 1 1 1 1;
 			padding: 0 40px;
+			@include mq($from:tablet, $until:desktop) {
+				padding: 0 20px;
+			}
+			@include mq($from:mobile, $until:tablet) {
+				padding: 0 5px;
+			}
 			img {
 				max-width: 100%;
 				display: block;
@@ -40,4 +47,11 @@
 			margin-bottom: 35px;
 		}
 	}
+}
+.about-hero {
+	padding-bottom: 80px;
+}
+.award-row {
+	padding-top: 40px;
+	max-width: 100%;
 }

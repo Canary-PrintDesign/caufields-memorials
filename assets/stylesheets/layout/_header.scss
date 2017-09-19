@@ -150,11 +150,14 @@
 					    transition: width .3s;
 					    margin-top: 4px;
 					}
-					&:hover::after {
-					    width: 100%;
-					}
+					
 					&:hover, &:active {
 						color: $brand-secondary;
+					}
+					@include mq($from: wide) {
+						&:hover::after {
+						  width: 100%;
+						}
 					}
 				}
 			}
@@ -204,7 +207,6 @@
 	}
 }
 
-
 .nav-header.partial-fixed  {
   	position: absolute;
     background: none;
@@ -221,5 +223,4 @@
     border-color: $white;
     color: $white;
   }
-
 }

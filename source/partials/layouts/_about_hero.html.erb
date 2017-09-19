@@ -1,0 +1,15 @@
+<div class="hero about-hero">
+	<div class="container">
+		<div class="content-container">
+			<h1><%= current_page.data.headline %></h1>
+			<p class="subtitle"><%= current_page.data.subtitle %></p>
+			<p class="intro-text"><%= current_page.data.introtext %></p>
+		</div>
+		<div class="img-container">
+   			<%= image_tag current_page.data.heroimage, :alt => 'Caufield Engraving Store' %>
+  		</div>
+	</div>
+	<div class="container">
+		<%= image_tag  "images/caufield_awards.jpg", :alt => 'Caufield Engraving Awards',:class => 'award-row' %>
+	</div>
+</div>
