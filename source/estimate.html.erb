@@ -2,7 +2,7 @@
 hero_layout: "partials/layouts/estimate_hero"
 title: Estimate | Caufields Memorials
 headline: Build Your Free Estimate
-subtitle: Step 1. Pick a Type
+subtitle: 
 ---
 
 <form id="ajax-contact" method="post" action="#" class="estimate-form">
@@ -10,343 +10,370 @@ subtitle: Step 1. Pick a Type
 <div class="main-content">
 
   <section class="step-1">
-    <div class="container">
-      <div class="col-3">
-        <div class="selection-container">
-          <% link_to('#slant_marker') do %>
-            <span class="img-container">
-              <%= image_tag "images/slant_marker.png", :alt => 'monument icon' %>
-            </span>  
-            <label class="h3" for="slantmarker">Slant Marker</label>
-            <input type="radio" name="type" value="slantmarker" />
-          <% end %>
-        </div>
+    <fieldset class="productgroup">
+      <legend>Step 1. Pick a Type</legend>
+      <div class="container">
+        <div class="col-3">
+          <div class="selection-container">
+            <div class="slant_marker">
+              <span class="img-container">
+                <%= image_tag "images/slant_marker.png", :alt => 'monument icon' %>
+              </span>  
+              <label class="h3" for="slantmarker">Slant Marker
+                <input type="radio" name="type" value="slantmarker" />
+              </label>
+            </div>
+          </div>
 
-        <div class="selection-container">
-          <% link_to('#bevel_marker') do %>
-            <span class="img-container">
-              <%= image_tag "images/plaque.png", :alt => 'monument icon' %>
-            </span>  
-            <label class="h3" for="bevelmarker">Bevel Marker</label>
-            <input type="radio" name="type" value="bevelmarker" />
-          <% end %>
-        </div>
+          <div class="selection-container">
+            <div class="bevel_marker">
+              <span class="img-container">
+                <%= image_tag "images/plaque.png", :alt => 'monument icon' %>
+              </span>  
+              <label class="h3" for="bevelmarker">Bevel Marker
+                <input type="radio" name="type" value="bevelmarker" />
+              </label>
+            </div>
+          </div>
 
-        <div class="selection-container">
-          <% link_to('#flat_top') do %>
-            <span class="img-container">
-              <%= image_tag "images/flat_top.png", :alt => 'monument icon' %>
-            </span>  
-            <label class="h3" for="flattop">Die (Flat Top)</label>
-            <input type="radio" name="type" value="flattop" />
-          <% end %>
-        </div>
+          <div class="selection-container">
+            <div class="flat_top">
+              <span class="img-container">
+                <%= image_tag "images/flat_top.png", :alt => 'monument icon' %>
+              </span>  
+              <label class="h3" for="flattop">Die (Flat Top)
+              <input type="radio" name="type" value="flattop" />
+              </label>
+            </div>
+          </div>
 
-        <div class="selection-container">
-          <% link_to('#serp_top') do %>
-            <span class="img-container">
-              <%= image_tag "images/monuments.png", :alt => 'monument icon' %>
-            </span>  
-            <label class="h3" for="serptop">Die (Serp Top)</label>
-            <input type="radio" name="type" value="serptop" />
-          <% end %>
-        </div>
+          <div class="selection-container">
+            <div class="serp_top">
+              <span class="img-container">
+                <%= image_tag "images/monuments.png", :alt => 'monument icon' %>
+              </span>  
+              <label class="h3" for="serptop">Die (Serp Top)
+                <input type="radio" name="type" value="serptop" />
+              </label>
+            </div>
+          </div>
 
-        <div class="selection-container">
-          <% link_to('#grass_marker') do %>
-            <span class="img-container">
-              <%= image_tag "images/grass_marker.png", :alt => 'monument icon' %>
-            </span>
-            <label class="h3" for="grassmarker">Flat/Grass Marker</label>
-            <input type="radio" name="type" value="grassmarker" />
-          <% end %>
-        </div>
+          <div class="selection-container">
+            <div class="grass_marker">
+              <span class="img-container">
+                <%= image_tag "images/grass_marker.png", :alt => 'monument icon' %>
+              </span>
+              <label class="h3" for="grassmarker">Flat/Grass Marker
+                <input type="radio" name="type" value="grassmarker" />
+              </label>
+            </div>
+          </div>
 
-        <div class="selection-container bronze-plaque">
-          <% link_to('#bronze_plaque') do %>
-            <span class="img-container">
-              <%= image_tag "images/plate.png", :alt => 'monument icon' %>
-            </span>
-            <label class="h3" for="bronzeplaque">Bronzed Plaque</label>
-            <input type="radio" name="type" value="bronzeplaque" />
-          <% end %>
-        </div>
+          <div class="selection-container bronze-plaque">
+            <div class="bronze_plaque">
+              <span class="img-container">
+                <%= image_tag "images/plate.png", :alt => 'monument icon' %>
+              </span>
+              <label class="h3" for="bronzeplaque">Bronzed Plaque
+                <input type="radio" name="type" value="bronzeplaque" />
+              </label>
+            </div>
+          </div>
 
+        </div>
       </div>
-    </div>
+    </fieldset>
   </section>
 
   <section class="step-2">
     <div class="container">
-      
-      <h2>Step 2. Pick a Size</h2>
-      
+      <fieldset>
+      <legend>Step 2. Pick a Size</legend>
+      <p>This is just a starting size, we can customize to meet your needs.</p>
       <div class="product-container default" id="slant_marker">
-        <h3>Slant Marker</h3>
+        <h3>Slant Marker | Length x Width x Height</h3>
         <span class="img-container">
           <%= image_tag "images/slant_marker.png", :alt => 'slant marker' %>
         </span>  
         <div class="col-3 size-choices">
           <div class="selection-container">
             <div class="copy-container">
-              <label class="h3" for="20x10x16">20 x 10 x 16 Inches<br />(Base 22 x 12 x 6)</label>
-              <input type="radio" name="size" value="20x10x16" />
+              <label class="h3" for="20x10x16">20 x 10 x 16 Inches<br />(Base 22 x 12 x 6)
+                <input type="radio" name="size" value="20x10x16" />
+              </label>
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              <label class="h3" for="24x10x16">24 x 10 x 16 Inches <br />(Base 30 x 12 x 6)</label>
-              <input type="radio" name="size" value="24x10x16" />
+              <label class="h3" for="24x10x16">24 x 10 x 16 Inches <br />(Base 30 x 12 x 6)
+                <input type="radio" name="size" value="24x10x16" />
+              </label>
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
               
-              <label class="h3" for="30x10x16">30 x 10 x 16 Inches <br />(Base 36 x 12 x 4)</label>
-              <input type="radio" name="size" value="30x10x16" />
+              <label class="h3" for="30x10x16">30 x 10 x 16 Inches <br />(Base 36 x 12 x 4)
+                <input type="radio" name="size" value="30x10x16" />
+              </label>
             </div>  
           </div>
         </div>
       </div>
       <div class="product-container" id="bevel_marker">
-        <h3>Bevel Marker</h3>
+        <h3>Bevel Marker | Length X Height X Width</h3>
         <span class="img-container">
           <%= image_tag "images/plaque.png", :alt => 'bevel marker' %>
         </span>  
         <div class="col-3 size-choices">
           <div class="selection-container">
             <div class="copy-container">
-              
-              <label class="h3" for="20x10x6">20 x 10 x 6 Inches</label>
-              <input type="radio" name="size" value="20x10x6" />
+              <label class="h3" for="20x10x6">20 x 10 x 6 Inches
+                <input type="radio" name="size" value="20x10x6" />
+              </label>
+            </div>  
+          </div>
+          <div class="selection-container">
+            <div class="copy-container">  
+              <label class="h3" for="20x12x6">20 x 12 x 6 Inches
+                <input type="radio" name="size" value="20x12x6" />
+              </label>
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              
-              <label class="h3" for="20x12x6">20 x 12 x 6 Inches</label>
-              <input type="radio" name="size" value="20x12x6" />
-            </div>  
-          </div>
-          <div class="selection-container">
-            <div class="copy-container">
-              
-              <label class="h3" for="24x12x6">24 x 12 x 6 Inches</label>
-              <input type="radio" name="size" value="24x12x6" />
+              <label class="h3" for="24x12x6">24 x 12 x 6 Inches
+                <input type="radio" name="size" value="24x12x6" />
+              </label>
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">              
-              <label class="h3" for="30x12x6">30 x 12 x 6 Inches</label>
-              <input type="radio" name="size" value="30x12x6" />
+              <label class="h3" for="30x12x6">30 x 12 x 6 Inches
+                <input type="radio" name="size" value="30x12x6" />
+              </label>
             </div>  
           </div>
         </div>
       </div>
       <div class="product-container" id="flat_top">
-        <h3>Die (Flat Top)</h3>
+        <h3>Die (Flat Top) | Length x Width x Height</h3>
         <span class="img-container">
           <%= image_tag "images/flat_top.png", :alt => 'flat top' %>
         </span>  
         <div class="col-3 size-choices">
           <div class="selection-container">
             <div class="copy-container">
-              
-              <label class="h3" for="20x6x16">20 x 6 x 16 Inches <br />(Base 26 x 12 x 6)</label>
-              <input type="radio" name="size" value="20x6x16" />
+              <label class="h3" for="20x6x16">20 x 6 x 16 Inches <br />(Base 26 x 12 x 6)
+                <input type="radio" name="size" value="20x6x16" />
+              </label>
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              
-              <label class="h3" for="24x6x20">24 x 6 x 20 Inches <br />(Base 30 x 12 x 4) </label>
-              <input type="radio" name="size" value="24x6x20" />              
+              <label class="h3" for="24x6x20">24 x 6 x 20 Inches <br />(Base 30 x 12 x 4)
+                <input type="radio" name="size" value="24x6x20" />    
+              </label>          
             </div>  
           </div>
           <div class="selection-container">
-            <div class="copy-container">
-             
-              <label class="h3" for="30x6x20"> 30 x 6 x 20 Inches <br />(Base 36 x 12 x 6)</label>
-              <input type="radio" name="size" value="30x6x20" />
+            <div class="copy-container">  
+              <label class="h3" for="30x6x20"> 30 x 6 x 20 Inches <br />(Base 36 x 12 x 6)
+                <input type="radio" name="size" value="30x6x20" />
+              </label>
             </div>  
           </div>
         </div>
       </div>
       <div class="product-container" id="serp_top">
-        <h3>Die (Serp Top)</h3>
+        <h3>Die (Serp Top) | Length x Width x Height</h3>
         <span class="img-container">
           <%= image_tag "images/monuments.png", :alt => 'serp top' %>
         </span>  
         <div class="col-3 size-choices">
           <div class="selection-container">
-            <div class="copy-container">
-              
-              <label class="h3" for="20x6x16">20 x 6 x 16 Inches <br />(Base 26 x 12 x 6)</label>
-              <input type="radio" name="size" value="20x6x16" />
+            <div class="copy-container">             
+              <label class="h3" for="20x6x16">20 x 6 x 16 Inches <br />(Base 26 x 12 x 6)
+                <input type="radio" name="size" value="20x6x16" />
+              </label>
+            </div>  
+          </div>
+          <div class="selection-container">
+            <div class="copy-container">             
+              <label class="h3" for="24x6x20">24 x 6 x 20 Inches <br />(Base 30 x 12 x 4)
+                <input type="radio" name="size" value="24x6x20" />
+              </label>
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              
-              <label class="h3" for="24x6x20">24 x 6 x 20 Inches <br />(Base 30 x 12 x 4) </label>
-              <input type="radio" name="size" value="24x6x20" />
-            </div>  
-          </div>
-          <div class="selection-container">
-            <div class="copy-container">
-              
-              <label class="h3" for="30x6x20">30 x 6 x 20 Inches <br />(Base 36 x 12 x 6) </label>
-              <input type="radio" name="size" value="30x6x20" />
+              <label class="h3" for="30x6x20">30 x 6 x 20 Inches <br />(Base 36 x 12 x 6)
+                <input type="radio" name="size" value="30x6x20" />
+              </label>
             </div>  
           </div>
         </div>  
       </div>
       <div class="product-container" id="grass_marker">
-        <h3>Grass Marker (Flat)</h3>
+        <h3>Grass Marker (Flat) | Length x Height x Width </h3>
         <span class="img-container">
           <%= image_tag "images/grass_marker.png", :alt => 'Grass Marker' %>
         </span>  
         <div class="col-3 size-choices">
           <div class="selection-container">
             <div class="copy-container">
-             
-              <label class="h3" for="12x8x4"> 12 x 8 x 4 Inches</label>
-              <input type="radio" name="size" value="12x8x4" />
+              <label class="h3" for="12x8x4"> 12 x 8 x 4 Inches
+                <input type="radio" name="size" value="12x8x4" />
+              </label>
             </div>  
           </div>
           <div class="selection-container">
-            <div class="copy-container">
-              
-              <label class="h3" for="20x8x4"> 20 x 8 x 4 Inches</label>
-              <input type="radio" name="size" value="20x8x4" />
+            <div class="copy-container">              
+              <label class="h3" for="20x8x4"> 20 x 8 x 4 Inches
+                <input type="radio" name="size" value="20x8x4" />
+              </label>
             </div>  
           </div>
           <div class="selection-container">
-            <div class="copy-container">
-              
-               <label class="h3" for="20x12x4">20 x 12 x 4 Inches</label>
-              <input type="radio" name="size" value="20x12x4" />
+            <div class="copy-container">             
+              <label class="h3" for="20x12x4">20 x 12 x 4 Inches
+                <input type="radio" name="size" value="20x12x4" />
+              </label>
             </div>  
           </div>
           <div class="selection-container">
-            <div class="copy-container">
-              
-              <label class="h3" for="24x12x4">24 x 12 x 4 Inches</label>
-              <input type="radio" name="size" value="24x12x4" />
+            <div class="copy-container">  
+              <label class="h3" for="24x12x4">24 x 12 x 4 Inches
+                <input type="radio" name="size" value="24x12x4" />
+              </label>
             </div>  
           </div>
         </div>
       </div>
       <div class="product-container" id="bronze_plaque">
-        <h3>Bronze Plaque</h3>
+        <h3>Bronze Plaque | Length x Width x Height</h3>
         <span class="img-container">
           <%= image_tag "images/plate.png", :alt => 'bronze plaque' %>
         </span>  
         <div class="col-3 size-choices">
           <div class="selection-container">
-            <div class="copy-container">
-              
-              <label class="h3" for="8x20">8 x 20 Inches</label>
-              <input type="radio" name="size" value="8x20" />
+            <div class="copy-container"> 
+              <label class="h3" for="8x20">8 x 20 Inches
+                <input type="radio" name="size" value="8x20" />
+              </label>
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              
-              <label class="h3" for="12x20">12 x 20 Inches</label>
-              <input type="radio" name="size" value="12x20" />
+              <label class="h3" for="12x20">12 x 20 Inches
+                <input type="radio" name="size" value="12x20" />
+              </label>
             </div>  
           </div>
           <div class="selection-container">
             <div class="copy-container">
-              <label class="h3" for="12x20">16 x 10 Inches</label>
-              <input type="radio" name="size" value="16x10" />
+              <label class="h3" for="16x10">16 x 10 Inches
+                <input type="radio" name="size" value="16x10" />
+              </label>
             </div>  
           </div>
         </div>
       </div>
+      </fieldset>
     </div>
   </section>
   <section class="step-3">
     <div class="container">
-      <h2>Step 3. Pick a Colour</h2>
+      <fieldset>
+      <legend>Step 3. Pick a Colour</legend>
       <div class="product-container color-choices">
         <div class="black selection-container">
-          <% link_to('#') do %>
-            <h3>Black Ultimate</h3>
+          <div class="colour">
+            <label class="h3" for="black">Black Ultimate
+              <input type="radio" name="colour" value="black" />
+            </label>
             <%= image_tag "images/granite/black-ultimate.jpg", :alt => 'black ultimate' %>
-          <% end %>
+          </div>
         </div>
         <div class="gray selection-container">
-          <% link_to('#') do %>
-            <h3>Barre Gray</h3>
+          <div class="colour">
+            <label class="h3" for="gray">Barre Gray
+              <input type="radio" name="colour" value="gray" />
+            </label>
             <%= image_tag "images/granite/barre-grey.jpg", :alt => 'Barre Gray' %>
-
-          <% end %>          
+          </div>          
         </div>
         <div class="rose selection-container">
-          <% link_to('#') do %>
-            <h3>Mountain Rose</h3>
+          <div class="colour">
+            <label class="h3" for="mountain-rose">Mountain Rose
+              <input type="radio" name="colour" value="rose" />
+            </label>
             <%= image_tag "images/granite/mountain-rose.jpg", :alt => 'Mountain rose' %>
-
-          <% end %>  
+          </div>          
         </div>
         <div class="blue selection-container">
-          <% link_to('#') do %>
-            <h3>Bahama Blue</h3>
+          <div class="colour">
+            <label class="h3" for="blue">Bahama Blue
+              <input type="radio" name="colour" value="blue" />
+            </label>
             <%= image_tag "images/granite/bahama-blue.jpg", :alt => 'bahama blue' %>
-
-          <% end %>           
+          </div>                   
         </div>
         <div class="mahogany selection-container">
-          <% link_to('#') do %>
-            <h3>Dakota Mahogany</h3>
+          <div class="colour">
+            <label class="h3" for="mahogany">Dakota Mahogany
+              <input type="radio" name="colour" value="mahogany" />
+            </label>
             <%= image_tag "images/granite/dakota-mahogany.jpg", :alt => 'dakota mahogany' %>
-          <% end %>            
+          </div>                      
         </div>
-        <div class="other">
+        <div class="other selection-container">
           <p>**Any colour available by request**</p>
-          <div class="checkbox-container add-portrait">
-            <input id="styled-checkbox-color" type="checkbox" value="color" />
-            <label for="styled-checkbox-color"> Other Colour</label>
+          <div class="checkbox-container">
+            <label for="othercolor"> Other Colour
+              <input id="styled-checkbox-color" type="radio" value="othercolor" />
+            </label>
           </div>
         </div>
       </div>
+    </fieldset>
     </div>  
   </section>
 
   <section class="step-4">
     <div class="container">
-      <h2>Step 4. Select optional Add-ons</h2>
-      <div class="col-3">
-        <div>
-          <div class="checkbox-container add-portrait">
-            <%= image_tag "images/work_2.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
-            <input id="styled-checkbox-1" type="checkbox" value="value1" />
-            <label for="styled-checkbox-1"> Add Engraved Portrait</label>
+      <fieldset>
+        <legend>Step 4. Select optional Add-ons</legend>
+        <div class="col-3">
+          <div>
+            <div class="checkbox-container add-portrait">
+              <%= image_tag "images/work_portrait.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
+              <input id="styled-checkbox-1" type="checkbox" value="value1" />
+              <label for="styled-checkbox-1"> Add Engraved Portrait</label>
+            </div>
           </div>
-        </div>
+          <div>
+            <div class="checkbox-container add-scene">
+              <%= image_tag "images/work_scene.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
+              <input id="styled-checkbox-2" type="checkbox" value="value2"> 
+              <label for="styled-checkbox-2"> Add a Scene</label>
+            </div>  
+          </div>
+          <div>
+            <div class="checkbox-container add-image">
+              <%= image_tag "images/work_7.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
+              <input id="styled-checkbox-3" type="checkbox" value="value3"> 
+              <label for="styled-checkbox-3"> Add an Image</label>
+            </div>  
+          </div>
+        </div> 
         <div>
-          <div class="checkbox-container add-scene">
-            <%= image_tag "images/work_3.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
-            <input id="styled-checkbox-2" type="checkbox" value="value2"> 
-            <label for="styled-checkbox-2"> Add a Scene</label>
+          <div class="checkbox-container no-addons selection-container">
+            <input id="styled-checkbox-4" type="checkbox" value="value3"> 
+            <label for="styled-checkbox-4"> No Add-ons, thanks!</label>
           </div>  
-        </div>
-        <div>
-          <div class="checkbox-container add-image">
-            <%= image_tag "images/work_7.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
-            <input id="styled-checkbox-3" type="checkbox" value="value3"> 
-            <label for="styled-checkbox-3"> Add an Image</label>
-          </div>  
-        </div>
-      </div> 
-      <div>
-        <div class="checkbox-container no-addons">
-          <input id="styled-checkbox-4" type="checkbox" value="value3"> 
-          <label for="styled-checkbox-4"> No Add-ons, thanks!</label>
-        </div>  
-      </div> 
+        </div> 
+      </fieldset>
     </div>    
   </section>
   <section class="step-5">
@@ -355,16 +382,16 @@ subtitle: Step 1. Pick a Type
       <p>Fill in the form below and we will email you shortly with the details of your free estimate! We promise we won't spam you.</p>
       <div class="product-container contact-form">
         <div class="other">
-          <label>Name</label>
-          <input type="text" name="name" />
+          <label for="name">Name</label>
+          <input type="text" name="name" tabindex="1" />
         </div>
         <div class="other">
-          <label>Email</label>
-          <input type="email" name="email" />
+          <label for="email">Email</label>
+          <input type="email" name="email" tabindex="2" />
         </div>
         <div class="other">
-          <label>Additional Comments</label>
-          <textarea></textarea>
+          <label for="comments">Additional Comments</label>
+          <textarea name="comments" tabindex="3"></textarea>
         </div>
         <button type="submit" class="btn-primary">Send in for Your Quote</button>
       </div>

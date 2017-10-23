@@ -142,11 +142,23 @@
 		}
 	}
 }
-.testimonials {
-	padding-top: 80px;
+@include mq($from: desktop) {
+	.double-testimonial {
+		display: flex;
+		align-items: center;
+		.quote {
+			flex: 1;
+			padding: 0 30px;
+		}
+	}
 }
 .single-testimonial {
 	max-width: 822px;
+	margin: 0 auto;
+	text-align: center;
+}
+.testimonials{
+	padding: 60px 0 50px;
 	margin: 0 auto;
 	text-align: center;
 
@@ -160,9 +172,9 @@
 	.quote {
 		text-align: center;
 		p {
-			font-size: em(22);
+			font-size: em(18);
 			font-style: italic;
-			line-height: em(30);
+			line-height: em(26);
 			&.author {
 				color: $brand-tertiary;
 				font-family: $font-family-heading;

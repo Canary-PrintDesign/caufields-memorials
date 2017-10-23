@@ -16,7 +16,7 @@ body {
 		"header"
 		"content"
 		"footer";
-	@include mq($from: tablet) {
+	@include mq($from: mobile, $until: tablet) {
 		overflow-x: hidden;
 	}
 }

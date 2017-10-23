@@ -150,11 +150,17 @@
 					    transition: width .3s;
 					    margin-top: 4px;
 					}
-					
+					&[aria-current=page]{
+						color: #2fa6c1;
+					}
+					&[aria-current=page]::after{
+						background: #2fa6c1;
+					}
 					&:hover, &:active {
 						color: $brand-secondary;
 					}
 					@include mq($from: wide) {
+						&[aria-current=page]::after,
 						&:hover::after {
 						  width: 100%;
 						}

@@ -29,14 +29,24 @@ $(document).ready(function(){
     $(this).siblings().removeClass('active');
 
   });
+  
+  $(".bronze-plaque").click(function(){
+    $('.add-portrait, .add-scene').hide();
+  });
+
+  $(".selection-container").not(".bronze-plaque").click(function(){
+    $('.add-portrait, .add-scene').show();
+  });
 
   $(".step-1 .selection-container").click(function(){
+
  	
-  	var product = $(this).children('a').attr("href");
+  	var product = $(this).children('div').attr("class");
+    var productId = '#'+product;
   	var headerHeight = 221;
 
-  	$(product).show();
-		$(product).siblings("div").hide();
+  	$(productId).show();
+		$(productId).siblings("div").hide();
 
     // $('html, body').animate({
     //   scrollTop: $(product).offset().top - headerHeight
@@ -55,6 +65,8 @@ $(document).ready(function(){
 
   });
 
+  
+
   $(".selection-container").click(function(){
 
     var fuller = $(this).closest('section').next();
@@ -64,12 +76,8 @@ $(document).ready(function(){
       scrollTop: $(fuller).offset().top - headerHeight
     }, 500);
 
-  });
 
-  	var product
-  	var size 
-  	var color
-  	var addOn
+  });
 
 
 });
