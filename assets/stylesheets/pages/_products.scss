@@ -20,3 +20,19 @@
 		text-align: center;
 	}
 }
+.product-template{
+	.image-row {
+		text-align: center;
+		padding: 60px 0 10px;
+		h2 {
+			text-align: center;
+		}
+		.container {
+			max-width: 1240px;
+			padding: 0 20px;
+		}
+		.col-4 div{
+			padding: 10px;
+		}	
+	}
+}

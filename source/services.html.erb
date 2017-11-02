@@ -8,22 +8,54 @@ introtext: Caufields Memorials is committed to quality craftsmanship when design
 
 ---
 <div class="main-content">
-  <section class="sub-template-content">
-    <div class="container">
-      <h3>IN HOUSE SANDBLASTING:</h3> <p> In-house sandblasting is done in our blast booth for all new stone orders. Many colors and sizes of granite are available in stock so lead time (barring art approval) can be very short. We take smaller natural stones that are brought in as well for in-house blasting which can be more cost effective for smaller projects.</p>
-
-      <h3>ON-SITE SANDBLASTING:</h3> <p> For name/date additions on monuments and headstones we go to any location so the stone does not have to be lifted or cleaned while also saving on transportation costs. For address stones we come right to your property and do all masking and sandblasting on site.
-      </p>
-      <h3>RESTORATION:</h3> <p> Cleaning, painting and full restoration services are available bringing any stone back to a ‘brand new’ finish. We restore granite memorial stones, bronze monuments, marble statues and natural monuments of all ages and varieties by cleaning, polishing and repainting for a new look.
-      </p>
-      <h3>BRONZE PLAQUES:</h3><p> We create art used for the molding process of cast metal or bronze plaques for memorial and historical purposes.
-      URNS: We carry a line of urns and engrave many different types that are brought in which includes metal, wood or stone. If it is round in shape we use our ‘rotisserie’ attachment for the laser machine to ‘turn’ them so the print is even.
-      </p>
+  <section class="products-services">
+   <div class="container">
+      <h2>Our Products</h2>
+      <div class="col-3">
+        <div>
+          <div class="icon-container">
+            <%= image_tag "images/monuments.png", :alt => 'monument icon' %>
+          </div>
+          <h3>Monuments</h3>
+          <p>Starting at $950</p>
+          <%= current_link_to 'More Details', '/monuments/', :class => 'link-primary'  %>
+        </div>
+        <div>
+          <div class="icon-container">
+            <%= image_tag "images/plaque.png", :alt => 'monument icon' %>
+          </div>
+          <h3>Bronze Plaques <br />& Name Bars </h3>
+          <p>Starting at $499</p>
+          <%= current_link_to 'More Details', '/plaques/', :class => 'link-primary'  %>
+        </div>
+        <div>
+          <div class="icon-container">
+            <%= image_tag "images/plate.png", :alt => 'monument icon' %>
+          </div>
+          <h3> Plates</h3>
+          <p></p>
+          <%= current_link_to 'More Details', '/plates/', :class => 'link-primary'  %>
+        </div>
+      </div>
     </div>
   </section>
   <section class="sub-template-content row-white">
     <div class="container">
-      <h2>Products and material:</h2>
+      <h2>Other Services we Provide</h2>
+      <h3>IN HOUSE SANDBLASTING:</h3> <p> In-house sandblasting is done in our blast booth for all new stone orders. Many colors and sizes of granite are available in stock so lead time (barring art approval) can be very short. We take smaller natural stones that are brought in as well for in-house blasting which can be more cost effective for smaller projects.</p>
+
+      <h3>ON-SITE SANDBLASTING:</h3> <p> For name/date additions on monuments and headstones we go to any location so the stone does not have to be lifted or cleaned while also saving on transportation costs. For address stones we come right to your property and do all masking and sandblasting on site.
+      </p>
+
+      <h3>RESTORATION:</h3> <p> Cleaning, painting and full restoration services are available bringing any stone back to a ‘brand new’ finish. We restore granite memorial stones, bronze monuments, marble statues and natural monuments of all ages and varieties by cleaning, polishing and repainting for a new look.
+      </p>
+
+      <h3>Address Stones:</h3><p> We sandblast large address stones and boulders for properties, acreages and businesses as well as custom structures to hold or hang stone. We have some larger natural stone available, which were from smaller custom projects. We are very willing to find any stone given a thorough description. If you do not have a boulder in place on your property any landscape contractor will have access to large stones and information on moving them. We have experience in building anything from timber frame standing signs to iron wrapped hanging stones. Any stone can be used for sandblasting except slate types due to the flakiness of the stone.
+      </p>
+<!--       <h3>BRONZE PLAQUES:</h3><p> We create art used for the molding process of cast metal or bronze plaques for memorial and historical purposes.
+      URNS: We carry a line of urns and engrave many different types that are brought in which includes metal, wood or stone. If it is round in shape we use our ‘rotisserie’ attachment for the laser machine to ‘turn’ them so the print is even.
+      </p> -->
+      <!-- <h2>Products and material:</h2>
       <h3>Memorial Stones (Headstones):</h3> <p>We make and mark traditional headstones in many shapes and colors with polished faces as well as polished or broken edges and bases to match. We also do non-traditional (natural) type stones which we have both polished and unpolished on one surface. Our granite headstones and marble is ordered from all over the world offering an array of colours. Each stone is from where it occurs naturally. For instance ‘Dakota Mahogany’ is from Dakota, United States, Black granite is from either China or India, Blue Pearl is from Norway, etc.
       </p>
       <h3>Address Stones:</h3><p> We sandblast large address stones and boulders for properties, acreages and businesses as well as custom structures to hold or hang stone. We have some larger natural stone available, which were from smaller custom projects. We are very willing to find any stone given a thorough description. If you do not have a boulder in place on your property any landscape contractor will have access to large stones and information on moving them. We have experience in building anything from timber frame standing signs to iron wrapped hanging stones. Any stone can be used for sandblasting except slate types due to the flakiness of the stone.
@@ -33,7 +65,7 @@ introtext: Caufields Memorials is committed to quality craftsmanship when design
       Restoring and Cleaning: We use a natural cleaning solution specifically meant for natural stone which removes water, moss and lichens stains and residue. Over time it works to reduce stains and growth of any type of moss or molds. The stone is scrubbed with a natural bristle brush to avoid scratching, then pressure washed. We remove overgrown grass and dirt to establish the original base size and create a drainage path for any excess water.
       </p>
       <h3>Bronze Plaques:</h3><p> We create digitally produced art to be used in the molding process for cast bronze plates and plaques. A custom mold is produced from the digital art file with a combination of zink and aluminum which is melted together to make the casting mixture. The molten casting mixture is then poured into the mold to make the custom metal cast plaque or plate. It is cooled, painted and polished and sent back to us for installation. These plaques take about 6 weeks in production and are sent back to us for installation.
-      </p>
+      </p> -->
   </section>
     <%= partial "partials/layouts/quote_banner" %>
 </div>

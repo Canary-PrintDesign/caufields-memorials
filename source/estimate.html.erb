@@ -5,7 +5,7 @@ headline: Build Your Free Estimate
 subtitle: 
 ---
 
-<form id="ajax-contact" method="post" action="#" class="estimate-form">
+<form id="free-estimate" title="Estimate form" method="post" action="#" class="estimate-form">
 
 <div class="main-content">
 
@@ -72,7 +72,7 @@ subtitle:
           <div class="selection-container bronze-plaque">
             <div class="bronze_plaque">
               <span class="img-container">
-                <%= image_tag "images/plate.png", :alt => 'monument icon' %>
+                <%= image_tag "images/plaque.png", :alt => 'monument icon' %>
               </span>
               <label class="h3" for="bronzeplaque">Bronzed Plaque
                 <input type="radio" name="type" value="bronzeplaque" />
@@ -289,8 +289,8 @@ subtitle:
       <div class="product-container color-choices">
         <div class="black selection-container">
           <div class="colour">
-            <label class="h3" for="black">Black Ultimate
-              <input type="radio" name="colour" value="black" />
+            <label class="h3" for="black-ultimate">Black Ultimate
+              <input type="radio" name="colour" value="black-ultimate" />
             </label>
             <%= image_tag "images/granite/black-ultimate.jpg", :alt => 'black ultimate' %>
           </div>
@@ -313,8 +313,8 @@ subtitle:
         </div>
         <div class="blue selection-container">
           <div class="colour">
-            <label class="h3" for="blue">Bahama Blue
-              <input type="radio" name="colour" value="blue" />
+            <label class="h3" for="bahama-blue">Bahama Blue
+              <input type="radio" name="colour" value="bahama-blue" />
             </label>
             <%= image_tag "images/granite/bahama-blue.jpg", :alt => 'bahama blue' %>
           </div>                   
@@ -325,6 +325,47 @@ subtitle:
               <input type="radio" name="colour" value="mahogany" />
             </label>
             <%= image_tag "images/granite/dakota-mahogany.jpg", :alt => 'dakota mahogany' %>
+          </div>                      
+        </div>
+
+        <div class="gray selection-container">
+          <div class="colour">
+            <label class="h3" for="galaxy-black">Galaxy Black
+              <input type="radio" name="colour" value="galaxy-black" />
+            </label>
+            <%= image_tag "images/granite/galaxy-black.jpg", :alt => 'Galaxy black' %>
+          </div>          
+        </div>
+        <div class="rose selection-container">
+          <div class="colour">
+            <label class="h3" for="blue-pearl">Blue Pearl
+              <input type="radio" name="colour" value="blue-pearl" />
+            </label>
+            <%= image_tag "images/granite/blue-pearl.jpg", :alt => 'blue pearl' %>
+          </div>          
+        </div>
+        <div class="blue selection-container">
+          <div class="colour">
+            <label class="h3" for="blue">Bahama Blue
+              <input type="radio" name="colour" value="blue" />
+            </label>
+            <%= image_tag "images/granite/bahama-blue.jpg", :alt => 'bahama blue' %>
+          </div>                   
+        </div>
+        <div class="mahogany selection-container">
+          <div class="colour">
+            <label class="h3" for="american-black">American Black
+              <input type="radio" name="colour" value="american-black" />
+            </label>
+            <%= image_tag "images/granite/american-black.jpg", :alt => 'american black' %>
+          </div>                      
+        </div>
+        <div class="mahogany selection-container">
+          <div class="colour">
+            <label class="h3" for="flash-impala">Flash Impala
+              <input type="radio" name="colour" value="flash-impala" />
+            </label>
+            <%= image_tag "images/granite/flash-impala.jpg", :alt => 'Flash Impala' %>
           </div>                      
         </div>
         <div class="other selection-container">
@@ -344,24 +385,31 @@ subtitle:
     <div class="container">
       <fieldset>
         <legend>Step 4. Select optional Add-ons</legend>
-        <div class="col-3">
+        <div class="col-4">
+          <div>
+            <div class="checkbox-container add-photo">
+              <%= image_tag "images/work_portrait.jpg", :alt => 'Photo Overlay' %>
+              <input id="styled-checkbox-1" type="checkbox" value="value1" />
+              <label for="styled-checkbox-1"> Add Photo Overlay</label>
+            </div>
+          </div>
           <div>
             <div class="checkbox-container add-portrait">
-              <%= image_tag "images/work_portrait.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
+              <%= image_tag "images/work_portrait.jpg", :alt => 'Engraved portrait' %>
               <input id="styled-checkbox-1" type="checkbox" value="value1" />
               <label for="styled-checkbox-1"> Add Engraved Portrait</label>
             </div>
           </div>
           <div>
             <div class="checkbox-container add-scene">
-              <%= image_tag "images/work_scene.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
+              <%= image_tag "images/work_scene.jpg", :alt => 'Scene' %>
               <input id="styled-checkbox-2" type="checkbox" value="value2"> 
               <label for="styled-checkbox-2"> Add a Scene</label>
             </div>  
           </div>
           <div>
             <div class="checkbox-container add-image">
-              <%= image_tag "images/work_7.jpg", :alt => 'Monument engraved to John and Rose together forever ' %>
+              <%= image_tag "images/work_7.jpg", :alt => 'Image' %>
               <input id="styled-checkbox-3" type="checkbox" value="value3"> 
               <label for="styled-checkbox-3"> Add an Image</label>
             </div>  
@@ -378,7 +426,7 @@ subtitle:
   </section>
   <section class="step-5">
     <div class="container">
-      <h2>Step 4. Contact Information</h2>
+      <h2>Step 5. Contact Information</h2>
       <p>Fill in the form below and we will email you shortly with the details of your free estimate! We promise we won't spam you.</p>
       <div class="product-container contact-form">
         <div class="other">
@@ -388,6 +436,10 @@ subtitle:
         <div class="other">
           <label for="email">Email</label>
           <input type="email" name="email" tabindex="2" />
+        </div>
+        <div class="other">
+          <label for="phone">Phone Number</label>
+          <input name="email" type="text" name="phone" required />
         </div>
         <div class="other">
           <label for="comments">Additional Comments</label>
