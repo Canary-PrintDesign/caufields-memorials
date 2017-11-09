@@ -12,27 +12,93 @@
 		margin-bottom: 50px;
 	}
 }
-.products .sub-template-content {
-	padding-top: 120px;
+.sub-template-content {
 	p{
+		font-size: 20px;
+		line-height: 1.5em;
+	}
+
+}
+.products .sub-template-content {
+	p {
+		text-align: center;
+	}
+}
+.image-row {
+	text-align: center;
+	padding: 60px 0 10px;
+		p{
 		font-size: 20px;
 		line-height: 1.5em;
 		text-align: center;
 	}
-}
-.product-template{
-	.image-row {
+	h2 {
 		text-align: center;
-		padding: 60px 0 10px;
-		h2 {
-			text-align: center;
-		}
-		.container {
-			max-width: 1240px;
-			padding: 0 20px;
-		}
-		.col-4 div{
-			padding: 10px;
-		}	
+	}
+	.container {
+		max-width: 1240px;
+		padding: 0 20px;
+	}
+	.col-4 div{
+		padding: 10px;
+	}	
+}
+.row-white {
+	h2 {
+		text-align: center;
+	}
+}
+.services .row-white .container {
+	max-width: 1000px;
+}
+.service-item {
+  position: relative;
+  min-height: 520px;
+  margin: 45px 0;
+  h3 {
+  	padding-top: 100px;
+  	@include mq($from:mobile, $until:tablet) {
+  		padding-top: 30px;
+  	}
+  }
+  p {
+    background: #fff;
+    max-width: 530px;
+    position: relative;
+    z-index: 2;
+    padding: 25px 15px 20px;
+    border: 7px solid #666;	
+    @include mq($from:mobile, $until:tablet) {
+    	max-width: 100%;
+    }
+  }
+  img {
+  	max-width: 100%;
+  }
+  &:nth-child(even){
+    img {
+    	@include mq($from:tablet) {
+    		position: absolute;
+    		right: 0;
+    		top: 0;
+    	}
+    }
+	}
+	&:nth-child(odd){
+    img {
+    	@include mq($from:tablet) {
+    		position: absolute;
+    		left: 0;
+    		top: 0;
+    	}
+    }
+    @include mq($from:tablet) {
+	    h3 {
+	    	margin-left: 520px;
+	    }
+	    p {
+    		margin-left: 50%;
+    	}
+	  }
 	}
 }
