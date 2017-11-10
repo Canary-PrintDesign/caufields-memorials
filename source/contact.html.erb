@@ -2,38 +2,41 @@
 hero_layout: "partials/layouts/hero"
 title: Contact | Caufields Memorials
 headline: Contact Us
-subtitle: Drop us a line 
+subtitle: Drop us a line
 introtext: Fill in the form below and we will email you shortly with the details of your free estimate! We promise we won't spam you.
 ---
 
-<form id="ajax-contact contact" method="post" action="#">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <div class="main-content">
   <section class="sub-template-content">
     <div class="container">
       <div class="product-container contact-form">
-        <div class="other">
-          <label for="name">Name</label>
-          <input name="name" type="text" name="name" />
-        </div>
-        <div class="other">
-          <label for="email">Email</label>
-          <input name="email" type="email" name="email" required />
-        </div>
-        <div class="other">
-          <label for="phone">Phone Number</label>
-          <input name="email" type="text" name="phone" />
-        </div>
-        <div class="other">
-          <label for="message">Your Message</label>
-          <textarea name="message" rows="8" required ></textarea>
-        </div>
-        <button type="submit" class="btn-primary">Send in for Message</button>
-      </div>
-    </div>  
-  </section>
-</div>
+
+<form id="ajax-contact contact" method="post" action="https://static-files.canaryprint.ca/caufieldsmemorials.com/mailer.php">
+
+
+            <div class="other">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="other">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="other">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="other">
+              <button type="submit" class="btn-primary">Send in for Message</button>
+            </div>
+
 
 </form>
-<div id="form-messages"></div>
 
+    </div>
+    <div id="form-messages"></div>
+  </section>
+</div>
