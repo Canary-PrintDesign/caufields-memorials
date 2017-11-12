@@ -116,8 +116,8 @@
 			  background: $brand-tertiary;
 			  list-style-type: none;
 			  -webkit-font-smoothing: antialiased;
-			  transform-origin: 0% 0%;
-			  transform: translate(100%, 0); 
+			  transform-origin: 0% -100%;
+			  transform: translate(0%, -100%); 
 			  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 			  visibility: hidden;
 			  a {
@@ -186,10 +186,38 @@
 	}
 
 	.contact {
-		@include Opacity(0.75);
 		font-size: em(18);
 		color: $brand-secondary;
 		padding-bottom: 20px;
+		i {
+	    color: #30a4bf;
+	    background: #fff;
+	    border: 1px solid #30a4bf;
+	    border-radius: 50%;
+	    width: 28px;
+	    vertical-align: middle;
+	    height: 28px;
+	    text-align: center;
+	    padding-top: 5px;
+	    margin-right: 5px;
+		}
+		a.phone {
+    	font-weight: 600;
+		}
+	}
+
+	&.partial-fixed .contact{
+		i {
+	    border: 1px solid #fff;
+		}
+		a:hover {
+			color: #30a4bf;
+			i {
+    	color: #fff;
+    	background: #30a4bf;
+   		border-color: #30a4bf;
+			}
+		}
 	}
 
 	.quote-link {
