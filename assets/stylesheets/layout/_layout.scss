@@ -16,9 +16,6 @@ body {
 		"header"
 		"content"
 		"footer";
-	@include mq($from: mobile, $until: tablet) {
-		overflow-x: hidden;
-	}
 }
 body.index {
 	padding-top: 0!important;
@@ -90,6 +87,14 @@ section {
 			width: 25%;
 		}
 	}	
+	@include mq($from: tablet) { 
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		> div{
+			display: inline-block;
+			width: 50%;
+		}
+	}
 	> div{
 		margin-bottom: 60px;
 		img {

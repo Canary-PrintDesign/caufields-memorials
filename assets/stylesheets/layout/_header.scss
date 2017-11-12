@@ -109,6 +109,7 @@
 			}
 			nav ul{
 			  position: absolute;
+			  right: -10px;
 		    width: 258px;
 		    margin: -125px 0 0 -93px;
 		    padding: 25px;
@@ -163,6 +164,12 @@
 						&[aria-current=page]::after,
 						&:hover::after {
 						  width: 100%;
+						}
+					}
+					@include mq($from: mobile, $until: tablet) {
+						&[aria-current=page]{
+							color: #fff;
+							text-decoration: underline;
 						}
 					}
 				}
@@ -225,7 +232,7 @@
     border-color: $brand-tertiary;
     color: $brand-tertiary;
 		@include mq($from: mobile, $until: 900px) {
-    	margin-top: 45px;
+    	margin-top: 48px;
     	padding: 6px 16px;
     }
 	}

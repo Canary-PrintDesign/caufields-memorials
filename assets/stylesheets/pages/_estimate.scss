@@ -8,6 +8,10 @@
 			margin-bottom: 10px;
 			font-size: 48px;
       color: #fff;
+      @include mq($from: mobile, $until: tablet) { 
+        font-size: 38px;
+        padding-top: 30px;
+      }
 		}
 		p {
 			margin-bottom: 0;
@@ -185,7 +189,7 @@
       // display: flex;
 			> div {
 				display: inline-block;
-        padding: 20px;
+        padding: 35px 20px;
 				background: $brand-tertiary;
 				color: $white;
 				border: 5px solid $white;
@@ -309,6 +313,7 @@
         width: 100%;
         @include mq($from: mobile, $until: tablet) {
           font-size: 20px;
+          padding: 28px;
         }
 
       }
@@ -371,6 +376,9 @@
     left: 0;
     z-index:1;
     height: 100%;
+    @include mq($from: mobile, $until: tablet) {
+      height: auto;
+    }
   }
 }
 .step-4 {

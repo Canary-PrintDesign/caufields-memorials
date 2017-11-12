@@ -36,6 +36,8 @@ $(document).ready(function(){
 
   $(".selection-container").not(".bronze-plaque").click(function(){
     $('.add-portrait, .add-scene').show();
+    $('#free-estimate').removeClass('bronze-plaque');
+
   });
 
   $(".step-1 .selection-container").click(function(){
