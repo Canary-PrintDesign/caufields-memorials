@@ -87,7 +87,7 @@ section {
 			width: 25%;
 		}
 	}	
-	@include mq($from: tablet) { 
+	@include mq($from: mobile, $until: desktop) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		> div{
