@@ -19,7 +19,8 @@
 
 				</div>
 				<% link_to '/', :class => 'logo-link' do %>
-					<%= image_tag 'logo-cm.png', :class => 'site-logo' %>
+					<img class="site-logo" src="<%= image_path('logo-cm.png') %>" srcset="<%= image_path('logo-cm@2x.png') %> 2x">
+
 				<% end %>
 			</div>
 			<div class="nav-right">

@@ -54,7 +54,10 @@
     font-size: 18px;
     color: $brand-secondary;
     padding: 10px;
-   @include mq($from: mobile, $until: tablet) {
+    &:focus {
+      border: 3px solid $brand-secondary;
+    }
+    @include mq($from: mobile, $until: tablet) {
       width: 100%;
     }
   }
@@ -73,7 +76,9 @@
     @include mq($from: mobile, $until: tablet) {
       width: 100%;
     }
-
+    &:focus {
+      border: 3px solid $brand-secondary;
+    }
   }
   .contact-form {
     text-align: left;
@@ -98,4 +103,23 @@
       font-size: 18px;
     }
   }
+}
+#form-messages {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 25px;
+}
+.success {
+  .btn-primary {
+    transition: .5s background;
+    background: #06c363;
+    color: #fff!important;
+  }
+}
+#form-messages.error{
+  color: #fff;
+  background: red;
+  padding: 10px;
 }

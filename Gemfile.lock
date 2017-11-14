@@ -29,6 +29,7 @@ GEM
     eventmachine (1.2.3)
     excon (0.54.0)
     execjs (2.7.0)
+    exifr (1.3.2)
     fast_blank (1.0.0)
     fastimage (2.1.0)
     ffi (1.9.18)
@@ -48,6 +49,7 @@ GEM
       fog-core
       nokogiri (~> 1.5, >= 1.5.11)
     formatador (0.2.5)
+    fspath (2.1.1)
     haml (5.0.1)
       temple (>= 0.8.0)
       tilt
@@ -56,6 +58,17 @@ GEM
     hashie (3.5.6)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
+    image_optim (0.20.2)
+      exifr (~> 1.1, >= 1.1.3)
+      fspath (~> 2.1)
+      image_size (~> 1.3)
+      in_threads (~> 1.3)
+      progress (~> 3.0, >= 3.0.1)
+    image_optim_pack (0.2.3)
+      fspath (>= 2.1, < 4)
+      image_optim (~> 0.19)
+    image_size (1.5.0)
+    in_threads (1.4.0)
     ipaddress (0.8.3)
     kramdown (1.14.0)
     listen (3.0.8)
@@ -101,6 +114,10 @@ GEM
       servolux
       tilt (~> 2.0)
       uglifier (~> 3.0)
+    middleman-imageoptim (0.2.1)
+      image_optim (~> 0.20.2)
+      image_optim_pack (~> 0.2.1)
+      middleman-core (>= 3.1)
     middleman-livereload (3.4.6)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
@@ -129,6 +146,7 @@ GEM
     padrino-support (0.13.3.4)
       activesupport (>= 3.1)
     parallel (1.11.2)
+    progress (3.4.0)
     public_suffix (2.0.5)
     rack (2.0.3)
     rack-livereload (0.3.16)
@@ -158,6 +176,7 @@ DEPENDENCIES
   middleman (~> 4.2)
   middleman-aria_current
   middleman-autoprefixer (~> 2.7)
+  middleman-imageoptim
   middleman-livereload
   middleman-s3_sync
   mime-types
@@ -165,4 +184,4 @@ DEPENDENCIES
   wdm (~> 0.1)
 
 BUNDLED WITH
-   1.12.5
+   1.16.0

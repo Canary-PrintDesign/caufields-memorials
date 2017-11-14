@@ -5,6 +5,12 @@ configure :development do
   activate :livereload
 end
 
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+  # activate :imageoptim
+end
+
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
@@ -24,6 +30,7 @@ set :relative_links, true
 activate :directory_indexes
 activate :aria_current
 activate :asset_hash
+activate :gzip
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'

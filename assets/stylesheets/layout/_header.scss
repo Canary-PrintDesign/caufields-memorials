@@ -211,6 +211,13 @@
 		a.phone {
     	font-weight: 600;
 		}
+		a:hover{ 
+			color: #30a4bf;
+			i{
+				background: #30a4bf;
+				color: #fff;
+			}
+		}
 	}
 
 	&.partial-fixed .contact{
@@ -218,10 +225,7 @@
 	    border: 1px solid #fff;
 		}
 		a:hover {
-			color: #30a4bf;
 			i {
-    	color: #fff;
-    	background: #30a4bf;
    		border-color: #30a4bf;
 			}
 		}

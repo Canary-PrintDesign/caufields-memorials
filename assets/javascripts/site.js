@@ -24,10 +24,8 @@ $(document).ready(function(){
 	
 	$(".step-2 .product-container").not(".default").hide();	
   $(".selection-container").click(function(){
-
     $(this).toggleClass('active');
     $(this).siblings().removeClass('active');
-
   });
   
   $(".bronze-plaque").click(function(){
@@ -37,11 +35,9 @@ $(document).ready(function(){
   $(".selection-container").not(".bronze-plaque").click(function(){
     $('.add-portrait, .add-scene').show();
     $('#free-estimate').removeClass('bronze-plaque');
-
   });
 
   $(".step-1 .selection-container").click(function(){
-
  	
   	var product = $(this).children('div').attr("class");
     var productId = '#'+product;
@@ -101,47 +97,43 @@ $(document).ready(function(){
     }   
   });
 
-  $(function() {
-    // Get the form.
+  // Set up an event listener for the contact form.
+  $('form').submit(function(e) {
+
     var form = $('#ajax-contact');
-    // Get the messages div.
+ 
+
+    e.preventDefault();
+
+    // Serialize the form data.
+    var formData = $('form').serialize();
     var formMessages = $('#form-messages');
-    // Set up an event listener for the contact form.
-    $(form).submit(function(e) {
-      // Stop the browser from submitting the form.
-      e.preventDefault();
-      // Serialize the form data.
-      var formData = $(form).serialize();
-      // Submit the form using AJAX.
-      $.ajax({
-        type: 'POST',
-        url: $(form).attr('action'),
-        data: formData
-      })
-      .done(function(response) {
-        // Make sure that the formMessages div has the 'success' class.
-        $(formMessages).removeClass('error');
+
+    $.ajax({
+      type: "POST",
+      url: $('form').attr('action'),
+      data: formData,
+      success: function(){
+        $('form').removeClass('error');
+        $('form').addClass('success');
         $(formMessages).addClass('success');
-        // Set the message text.
-        $(formMessages).text(response);
-        // Clear the form.
-        $('#name, #email, #message').val('');
-      })
-      .fail(function(data) {
-        // Make sure that the formMessages div has the 'error' class.
-        $(formMessages).removeClass('success');
-        $(formMessages).addClass('error');
-        // Set the message text.
-        if (data.responseText !== '') {
-          $(formMessages).text(data.responseText);
-        } else {
-          $(formMessages).text('Oops! An error occured and your message could not be sent.');
-        }
-      });
-    });
+        $(formMessages).removeClass('error');
+        $('form button').text('Successfully Sent!');
+        console.log('success');
+      },
+      error: function(){
+
+        // $('form').removeClass('success');
+        // $('form').addClass('error');
+        // $(formMessages).addClass('error');
+        // $(formMessages).removeClass('success');
+
+        // $(formMessages).text('Oops! An error occured and your message could not be sent.');
+      
+      }
+    })
+
   });
-
-
 
 });
 

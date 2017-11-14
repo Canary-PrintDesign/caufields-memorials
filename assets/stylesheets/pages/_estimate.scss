@@ -578,6 +578,9 @@ input[type="checkbox"] {
     font-size: 18px;
     color: $brand-secondary;
     padding: 10px;
+    &:focus {
+      border: 3px solid $brand-secondary;
+    }
    @include mq($from: mobile, $until: tablet) {
       width: 100%;
     }
@@ -594,6 +597,9 @@ input[type="checkbox"] {
     font-size: 18px;
     color: $brand-secondary;
     padding: 0 10px;
+    &:focus {
+      border: 3px solid $brand-secondary;
+    }
     @include mq($from: mobile, $until: tablet) {
       width: 100%;
     }

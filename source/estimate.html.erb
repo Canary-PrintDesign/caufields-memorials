@@ -2,8 +2,9 @@
 hero_layout: "partials/layouts/estimate_hero"
 title: Estimate | Caufields Memorials
 headline: Build Your Free Estimate
-subtitle:
 ---
+
+
 
 <form id="free-estimate" title="Estimate form" method="post" action="https://static-files.canaryprint.ca/caufieldsmemorials.com/estimates.php" class="estimate-form">
 
@@ -431,11 +432,11 @@ subtitle:
       <div class="product-container contact-form">
         <div class="other">
           <label for="name">Name</label>
-          <input type="text" name="name" tabindex="1" />
+          <input type="text" required name="name" tabindex="1" />
         </div>
         <div class="other">
           <label for="email">Email</label>
-          <input type="email" name="email" tabindex="2" />
+          <input type="email" required name="email" tabindex="2" />
         </div>
         <div class="other">
           <label for="phone">Phone Number</label>
@@ -447,6 +448,7 @@ subtitle:
         </div>
         <button type="submit" class="btn-primary">Send in for Your Quote</button>
       </div>
+      <div id="form-messages"></div>
     </div>
 
   </section>
