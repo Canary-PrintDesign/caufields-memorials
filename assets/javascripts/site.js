@@ -100,9 +100,6 @@ $(document).ready(function(){
   // Set up an event listener for the contact form.
   $('form').submit(function(e) {
 
-    var form = $('#ajax-contact');
- 
-
     e.preventDefault();
 
     // Serialize the form data.
@@ -123,17 +120,61 @@ $(document).ready(function(){
       },
       error: function(){
 
-        // $('form').removeClass('success');
-        // $('form').addClass('error');
-        // $(formMessages).addClass('error');
-        // $(formMessages).removeClass('success');
-
-        // $(formMessages).text('Oops! An error occured and your message could not be sent.');
+        $('form').removeClass('success');
+        $('form').addClass('error');
+        $(formMessages).addClass('error');
+        $(formMessages).removeClass('success');
+        $(formMessages).text('Oops! An error occured and your message could not be sent.');
       
       }
     })
 
   });
 
-});
+});  
+
+
+
+// $('form').on("submit", function (e) {
+  
+//   e.preventDefault();
+
+//   // Initiate Variables With Form Content
+//   var formData = $('form').serialize();
+
+//   $.ajax({
+//     type: "POST",
+//     url: $('form').attr('action'),
+//     data: formData
+//     success : function(text){
+//       if (text == "success"){
+//           formSuccess();
+//       } else {
+//         formError();
+//         submitMSG(false,text);
+//       }
+//     }
+//   });
+
+//   function formSuccess(){
+//     $('form')[0].reset();
+//     submitMSG(true, "Message Submitted!")
+//   }
+
+//   function formError(){
+//     $('form').removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+//         $(this).removeClass();
+//     });
+//   }
+
+//   function submitMSG(valid, msg){
+//     if(valid){
+//         var msgClasses = "h3 text-center tada animated text-success";
+//     } else {
+//         var msgClasses = "h3 text-center text-danger";
+//     }
+//     $("#form-messages").removeClass().addClass(msgClasses).text(msg);
+//   }
+
+// });
 
