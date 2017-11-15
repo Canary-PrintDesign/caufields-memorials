@@ -116,6 +116,7 @@ $(document).ready(function(){
         $(formMessages).addClass('success');
         $(formMessages).removeClass('error');
         $('form button').text('Successfully Sent!');
+        $('form').find('textarea, :text, :email').val('');
         console.log('success');
       },
       error: function(){
@@ -124,6 +125,7 @@ $(document).ready(function(){
         $('form').addClass('error');
         $(formMessages).addClass('error');
         $(formMessages).removeClass('success');
+        $('form button').text('Please Try Again');
         $(formMessages).text('Oops! An error occured and your message could not be sent.');
       
       }
