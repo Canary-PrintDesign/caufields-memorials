@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 	<head>
+    <%= partial "partials/google_analytics" %>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport"
@@ -29,13 +30,12 @@
 			<%= yield %>
 		</div>
 		<%= partial "partials/layouts/page_footer" %>
-		<%= partial "partials/google_analytics" %>
 		<%= javascript_include_tag "site.bundle" %>
-		
+
 		<!-- Start of HubSpot Embed Code -->
   	<script type="text/javascript" id="hs-script-loader" async defer 	src="//js.hs-scripts.com/3903931.js"></script>
 		<!-- End of HubSpot Embed Code -->
-		
+
 
 	</body>
 </html>
