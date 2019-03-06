@@ -83,7 +83,7 @@ footer {
 			@include mq($from: mobile, $until: tablet) {
 				letter-spacing: 0;
 			}
-		}	
+		}
 		a {
 			color: $brand-secondary;
 			font-weight: 400;
