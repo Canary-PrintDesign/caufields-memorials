@@ -1,0 +1,29 @@
+---
+hero_layout: "partials/layouts/hero"
+title: Our Work | Caufields Memorials
+headline: Photo Gallery
+subtitle: View some of the work we've done
+heroimage: images/our-work-hero.jpg
+introtext: We've been blessed to do memorials that have honored very special people. We look forward to helping you remember your loved ones. <br> Please contact us if you have any questions. If you need a quote, please click "Free Quote" at the top of the page and we'll assist in getting you the memorial you need for the right price.
+---
+<script src="//cdn.rawgit.com/stevenschobert/instafeed.js/master/instafeed.min.js"></script>
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'user',
+        userId: '11627250420',
+        clientId: 'd1384259af4f4b1e90d5c8d8312a7307',
+        accessToken: '11627250420.d138425.02d1d02a51b34cc59f78ae3ecae64981',
+        template: '<a href="{{link}}"><img class="igimg" src="{{image}}" /></a> ',
+        resolution: 'standard_resolution',
+        limit: '18'
+    });
+    feed.run();
+</script>
+
+
+<div class="main-content">
+  <section class="sub-template-content">
+      <div id="instafeed"></div>
+  </section>
+    <%= partial "partials/layouts/quote_banner" %>
+</div>
